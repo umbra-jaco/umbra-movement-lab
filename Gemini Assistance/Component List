@@ -1,0 +1,31 @@
+1. Global Components (The Frame)
+These are the persistent elements that exist on every page, establishing the "CAD-style" and chiaroscuro aesthetic immediately.
+
+Persistent Navigation Bar: Minimalist, transparent or stark black. Instead of standard text links, we can use technical index numbers (e.g., 01_MISSION, 02_LAB, 03_GEAR).
+
+Global Grid Overlay: A very subtle, faint crimson or grey architectural grid line background that stays fixed as the user scrolls, reinforcing the "lab" and "technical" feel.
+
+The Footer (The Terminal): Instead of a standard footer, we can design it to look like a raw terminal readout (nodding to your IT background) displaying copyright, facility address, and contact protocols in a monospaced font.
+
+2. The Homepage / Landing Components
+The Hero Section: The most critical component. It requires pitch-black negative space, a stark white headline, and a focal point—perhaps an animated or static CAD-style SVG of a joint articulation or a grappling exchange.
+
+The "Manifesto" / Codex Block: A typography-heavy section for the brand philosophy. We will use asymmetrical, broken-grid text layouts to emphasize the human, unpredictable nature of ecological dynamics.
+
+Interactive CLA Sandbox (Cool Trick): We can build a stripped-down version of the Constraints-Led Approach slider tool directly into the homepage. Users adjust sliders (Task, Organism, Environment) and a geometric shape (representing the "solution space") visually shifts in real-time.
+
+The Schedule / Matrix: A strict, brutalist table displaying training times (Muay Thai, BJJ, Open Lab). High contrast, harsh borders, no soft edges.
+
+3. Community & Utility Components
+Instructor / Facilitator Profiles: Stripped-down ID cards. High-contrast, monochromatic photos with crimson accents.
+
+The "Inventory" (E-commerce UI): For apparel or gear. Instead of standard product grids, we can design them to look like technical spec sheets or blueprint schematics of the clothing.
+
+The Intake Form / Booking: A highly stylized, terminal-esque form for new members to apply or book lab time.
+
+Unique Integration Tips & Tricks
+Hover States as "Flashlights": To lean into the chiaroscuro lighting, we can program the background to be pitch black, but as the user moves their mouse, a subtle radial gradient follows the cursor, "illuminating" text or CAD drawings hidden in the shadows.
+
+Command Line Interface (CLI) Easter Egg: We can build a hidden modal that opens if a user types a specific command on the keyboard. It could open a PowerShell-style terminal window in the browser that displays hidden brand lore or a raw text version of the training schedule.
+
+Scroll-Triggered Affordances: As the user scrolls down, the CAD-style SVGs could slowly draw themselves line-by-line, mimicking the process of a system booting up or a movement pattern being learned.

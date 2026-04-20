@@ -1,6 +1,7 @@
 import { Inter, Space_Grotesk, Fraunces, Syne, Cinzel_Decorative } from "next/font/google";
-import Header from "@/components/Header"; // <-- Add this import
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AcousticNode from "@/components/AcousticNode"; // Injected for Sensory Depth
 import "./globals.css";
 
 // Instantiate the Free Google Fonts
@@ -28,13 +29,19 @@ export default function RootLayout({ children }) {
           bg-void text-albedo antialiased selection:bg-visceral-crimson selection:text-albedo
         `}
         >
-        {/* The Atmospheric Noise Layer */}
+        {/* 1. The Atmospheric Noise Layer (Tactile Overlay) */}
         <div
             className="pointer-events-none fixed inset-0 z-50 h-full w-full opacity-5 mix-blend-overlay bg-[url('/noise.svg')]"
             aria-hidden="true"
         />
 
-        {/* Main Application Wrapper */}
+        {/* 2. The Acoustic Node (Procedural Audio Engine)
+            Placed outside the main wrapper to ensure zero-latency persistence
+            during manifold navigation.
+        */}
+        <AcousticNode />
+
+        {/* 3. Main Application Wrapper */}
         <div className="relative z-10 flex min-h-screen flex-col">
 
             {/* Global Header Injection */}

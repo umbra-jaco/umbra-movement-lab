@@ -1,36 +1,44 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-  /* UMBRA Core Palette */
-  --color-umbra-navy: #01153D;
-  --color-cool-blue: #0047AB;
-  --color-cloud-dancer: #F0EEE9;
-  --color-electric-orange: #F74125;
+@layer base {
+  :root {
+    --background: #050505; /* Void Black base */
+    --foreground: #F5F5F0; /* Albedo Cream */
+    --border: #1A1A1A;
+    --input: #1A1A1A;
+    --ring: #01153D; /* Umbra Navy */
 
-  /* UMBRA Typography Mappings */
-  --font-technical: var(--font-inter), sans-serif;
-  --font-editorial: var(--font-fraunces), serif;
-  --font-headline: "Cabinet Grotesk", var(--font-inter), sans-serif;
+    --primary: #F5F5F0;
+    --primary-foreground: #050505;
+  }
 }
 
-body {
-  background-color: var(--color-umbra-navy);
-  color: var(--color-cloud-dancer);
-  font-family: var(--font-technical);
-  /* Chiaroscuro/Tenebrism lighting effect */
-  background-image: radial-gradient(circle at 50% -20%, var(--color-cool-blue) 0%, transparent 60%);
-  background-attachment: fixed;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  overflow-x: hidden;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-inter antialiased selection:bg-visceral-crimson selection:text-albedo;
+    /* Forces horizontal scroll off for kinetic animations */
+    overflow-x: hidden;
+  }
+
+  /* Typography Scale Overrides */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-cabinet tracking-tight;
+  }
 }
 
-/* Advanced Liquid Glass Utility */
-.liquid-glass {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(16px) saturate(150%);
-  -webkit-backdrop-filter: blur(16px) saturate(150%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.05);
+@layer utilities {
+  /* Liquid Glass Component Utility */
+  .liquid-glass {
+    @apply bg-void-black/40 backdrop-blur-md border border-white/5 shadow-2xl;
+  }
+
+  /* Haptic Icon Utility */
+  .haptic-node {
+    @apply bg-void shadow-haptic-emboss transition-all duration-300 active:shadow-haptic-pressed;
+  }
 }

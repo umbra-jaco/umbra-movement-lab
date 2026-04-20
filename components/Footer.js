@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, CircleDashed } from "lucide-react";
+import Link from 'next/link';
 
 export default function Footer() {
     return (
@@ -53,7 +54,7 @@ export default function Footer() {
                             <li><a href="#" className="hover:text-albedo transition-colors">The Lab</a></li>
                             <li><a href="#" className="hover:text-albedo transition-colors">Curriculum</a></li>
                             <li><a href="#" className="hover:text-albedo transition-colors">Ascendant Artifacts</a></li>
-                            <li><a href="#" className="hover:text-albedo transition-colors">Philosophy</a></li>
+                            <li><a href="/philosophy" className="hover:text-albedo transition-colors">Philosophy</a></li>
                         </ul>
                     </div>
 

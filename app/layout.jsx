@@ -1,5 +1,6 @@
 import { Inter, Space_Grotesk, Fraunces, Syne, Cinzel_Decorative } from "next/font/google";
-import Footer from "@/components/Footer"; // <-- Add this import
+import Header from "@/components/Header"; // <-- Add this import
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 // Instantiate the Free Google Fonts
@@ -33,14 +34,20 @@ export default function RootLayout({ children }) {
             aria-hidden="true"
         />
 
-        {/* Main Application Node */}
-        <main className="relative z-10 flex min-h-screen flex-col">
-            <div className="flex-1">
+        {/* Main Application Wrapper */}
+        <div className="relative z-10 flex min-h-screen flex-col">
+
+            {/* Global Header Injection */}
+            <Header />
+
+            {/* Main Page Content */}
+            <main className="flex-1">
                 {children}
-            </div>
+            </main>
+
             {/* Global Footer Injection */}
             <Footer />
-        </main>
+        </div>
         </body>
         </html>
     );

@@ -51,10 +51,10 @@ export default function Footer() {
                     <div>
                         <h4 className="font-clinical text-xs tracking-[0.2em] uppercase text-white/60 mb-6">The Manifold</h4>
                         <ul className="space-y-4 font-clinical text-sm tracking-widest uppercase text-white/30">
-                            <li><a href="#" className="hover:text-albedo transition-colors">The Lab</a></li>
-                            <li><a href="#" className="hover:text-albedo transition-colors">Curriculum</a></li>
-                            <li><a href="#" className="hover:text-albedo transition-colors">Ascendant Artifacts</a></li>
-                            <li><a href="/philosophy" className="hover:text-albedo transition-colors">Philosophy</a></li>
+                            <li><Link href="/lab" className="hover:text-albedo transition-colors">The Lab</Link></li>
+                            <li><Link href="/curriculum" className="hover:text-albedo transition-colors">Curriculum</Link></li>
+                            <li><Link href="/artifacts" className="hover:text-albedo transition-colors">Ascendant Artifacts</Link></li>
+                            <li><Link href="/philosophy" className="hover:text-albedo transition-colors">Philosophy</Link></li>
                         </ul>
                     </div>
 
@@ -73,8 +73,8 @@ export default function Footer() {
                     <div className="flex items-center gap-3">
                         <div className="w-2 h-2 rounded-full bg-phosphor-green animate-pulse" />
                         <span className="font-clinical text-[10px] tracking-[0.3em] uppercase text-white/40">
-              System Stable
-            </span>
+                            System Stable
+                        </span>
                     </div>
                     <p className="font-clinical text-[10px] tracking-[0.2em] uppercase text-white/30 text-center md:text-right">
                         © {new Date().getFullYear()} UMBRA Movement Labs. All Rights Reserved.

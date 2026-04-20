@@ -2,8 +2,9 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Orbit, Activity, Crosshair } from "lucide-react";
-import BentoGrid from "../components/BentoGrid"; // Adjust to "./components/BentoGrid" if inside the app directory
-import Curriculum from "@/components/Curriculum"; // or "../components/Curriculum" depending on your pathing
+import Link from "next/link";
+import BentoGrid from "../components/BentoGrid";
+import Curriculum from "@/components/Curriculum";
 import VoidedSphere from "@/components/VoidedSphere";
 
 // Animation Variants for Kinetic Fluidity
@@ -28,9 +29,7 @@ export default function LandingPage() {
     return (
         <div className="relative min-h-screen bg-void flex flex-col justify-center overflow-hidden">
 
-            {/* Background Layer: Cinematic Spotlight Simulation
-          (Replace this div with your actual looping cinematic B-Roll <video> tag later)
-      */}
+            {/* Background Layer: Cinematic Spotlight Simulation */}
             <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-umbra-navy/20 via-void to-void opacity-80" />
 
             {/* Grid Overlay for Brutalist/CAD-style scaling */}
@@ -48,8 +47,8 @@ export default function LandingPage() {
                     <motion.div variants={itemVariants} className="flex items-center gap-3 mb-8">
                         <Orbit className="text-visceral-crimson w-5 h-5 animate-[spin_10s_linear_infinite]" />
                         <span className="font-clinical text-xs tracking-[0.3em] uppercase text-visceral-crimson">
-              Protocol: Inner Crucible
-            </span>
+                            Protocol: Inner Crucible
+                        </span>
                     </motion.div>
 
                     {/* Kinetic Headline */}
@@ -60,8 +59,6 @@ export default function LandingPage() {
                         Haptic Dominance <br />
                         <span className="text-white/40">Over Optic Reliance.</span>
                     </motion.h1>
-
-
 
                     {/* Editorial Warmth / Prose */}
                     <motion.p
@@ -76,25 +73,30 @@ export default function LandingPage() {
 
                     {/* Action Nodes */}
                     <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-6">
-                        <button className="haptic-node font-clinical uppercase tracking-widest text-sm px-8 py-5 flex items-center justify-center gap-3 text-albedo-cream group">
+                        <Link
+                            href="/access"
+                            className="haptic-node font-clinical uppercase tracking-widest text-sm px-8 py-5 flex items-center justify-center gap-3 text-albedo-cream group border border-white/10 hover:border-visceral-crimson transition-all"
+                        >
                             Initiate Assessment
                             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 text-visceral-crimson" />
-                        </button>
-                        <button className="liquid-glass font-clinical uppercase tracking-widest text-sm px-8 py-5 flex items-center justify-center text-albedo-cream hover:bg-white/10 transition-colors">
+                        </Link>
+                        <Link
+                            href="/lexicon"
+                            className="liquid-glass font-clinical uppercase tracking-widest text-sm px-8 py-5 flex items-center justify-center text-albedo-cream hover:bg-white/10 transition-colors border border-white/10"
+                        >
                             Read The Codex
-                        </button>
+                        </Link>
                     </motion.div>
                 </motion.div>
                 <VoidedSphere />
             </div>
-
 
             {/* Floating Diagnostic Card (Liquid Glass Example) */}
             <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1.2, duration: 0.8, type: "spring" }}
-                className="hidden lg:flex absolute right-12 bottom-24 liquid-glass p-6 flex-col gap-4 max-w-xs"
+                className="hidden lg:flex absolute right-12 bottom-24 liquid-glass p-6 flex-col gap-4 max-w-xs border border-white/5"
             >
                 <div className="flex items-center justify-between border-b border-white/10 pb-4 mb-2">
                     <span className="font-clinical text-xs tracking-widest uppercase text-white/50">Live Matrix</span>

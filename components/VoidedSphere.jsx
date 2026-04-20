@@ -1,109 +1,109 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function VoidedSphere() {
     const [mounted, setMounted] = useState(false);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
-
-    // 1. Haptic Mouse Tracking
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
 
-    // 2. Clinical Springs for ultra-smooth, heavy momentum
-    const springConfig = { damping: 40, stiffness: 100, mass: 1.5 };
+    // Heavy, viscous physics for the system's "inertia"
+    const springConfig = { damping: 30, stiffness: 50, mass: 2 };
     const smoothX = useSpring(mouseX, springConfig);
     const smoothY = useSpring(mouseY, springConfig);
 
-    // 3. 3D Tilt Transformations
-    const rotateX = useTransform(smoothY, [-0.5, 0.5], [20, -20]);
-    const rotateY = useTransform(smoothX, [-0.5, 0.5], [-20, 20]);
+    // 1. TOP-LEVEL TRANSFORM DEFINITIONS (Fixes the Hook Order error)
+    // We explicitly define the transforms for our 3 constraint boundaries here.
+    const ring1X = useTransform(smoothX, [-0.5, 0.5], [-20, 20]);
+    const ring1Y = useTransform(smoothY, [-0.5, 0.5], [-20, 20]);
 
-    // 4. Crimson Flare Tracking (translating to pixels for the glow)
-    const flareX = useTransform(smoothX, [-0.5, 0.5], ["-50%", "50%"]);
-    const flareY = useTransform(smoothY, [-0.5, 0.5], ["-50%", "50%"]);
+    const ring2X = useTransform(smoothX, [-0.5, 0.5], [-40, 40]);
+    const ring2Y = useTransform(smoothY, [-0.5, 0.5], [-40, 40]);
 
-    function handleMouseMove(event) {
-        const rect = event.currentTarget.getBoundingClientRect();
-        const x = (event.clientX - rect.left) / rect.width - 0.5;
-        const y = (event.clientY - rect.top) / rect.height - 0.5;
-        mouseX.set(x);
-        mouseY.set(y);
-    }
+    const ring3X = useTransform(smoothX, [-0.5, 0.5], [-60, 60]);
+    const ring3Y = useTransform(smoothY, [-0.5, 0.5], [-60, 60]);
 
-    function handleMouseLeave() {
-        mouseX.set(0);
-        mouseY.set(0);
-    }
+    // Core System Transforms
+    const coreScale = useTransform(smoothX, [-0.5, 0.5], [1.1, 0.9]);
+    const distortion = useTransform(smoothY, [-0.5, 0.5], [-15, 15]);
+    const crimsonGlow = useTransform(smoothX, [-0.5, 0.5], [0.1, 0.5]);
+
+    useEffect(() => {
+        setMounted(true);
+        const handleMove = (e) => {
+            mouseX.set((e.clientX / window.innerWidth) - 0.5);
+            mouseY.set((e.clientY / window.innerHeight) - 0.5);
+        };
+        window.addEventListener("mousemove", handleMove);
+        return () => window.removeEventListener("mousemove", handleMove);
+    }, [mouseX, mouseY]);
 
     if (!mounted) return null;
 
-    return (
-        <div
-            className="relative w-full max-w-[450px] aspect-square mx-auto flex items-center justify-center group"
-            style={{ perspective: "1200px" }}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-        >
-            {/* Core 3D Container */}
-            <motion.div
-                style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-                className="relative w-full h-full flex items-center justify-center"
-            >
+    // Grouping rings for easier rendering without nested hooks
+    const rings = [
+        { x: ring1X, y: ring1Y, size: "100%" },
+        { x: ring2X, y: ring2Y, size: "140%" },
+        { x: ring3X, y: ring3Y, size: "180%" },
+    ];
 
-                {/* LAYER 1: The Reactive Crimson Flare (Deepest layer, moves with mouse) */}
+    return (
+        <div className="relative w-[500px] h-[500px] flex items-center justify-center">
+            {/* The Lagrangian Grid */}
+            <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 400 400">
+                <defs>
+                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#F5F5F0" strokeWidth="0.5" />
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+
+            {/* The Attractor Core */}
+            <motion.div
+                style={{
+                    scale: coreScale,
+                    rotateX: distortion,
+                    rotateY: distortion,
+                }}
+                className="relative z-10 w-64 h-64 border border-albedo/20 rounded-full flex items-center justify-center backdrop-blur-sm"
+            >
                 <motion.div
-                    style={{ x: flareX, y: flareY, transform: "translateZ(-100px)" }}
-                    className="absolute w-[80%] h-[80%] rounded-full bg-visceral-crimson/80 blur-[80px] opacity-30 group-hover:opacity-100 transition-opacity duration-1000"
+                    animate={{
+                        scale: [1, 1.05, 1],
+                        opacity: [0.3, 0.6, 0.3]
+                    }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                    className="w-32 h-32 bg-albedo/10 rounded-full blur-2xl"
                 />
 
-                {/* LAYER 2: The Deep Void Core (The Black Hole) */}
-                <div
-                    style={{ transform: "translateZ(0px)" }}
-                    className="absolute w-[45%] h-[45%] rounded-full bg-void-black border border-white/5 shadow-[inset_0_0_40px_rgba(0,0,0,1)] z-10"
-                >
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent via-white/[0.02] to-transparent" />
-                </div>
-
-                {/* LAYER 3: Optical Rings (Floating at different Z-depths) */}
-                <svg viewBox="0 0 400 400" className="absolute inset-0 w-full h-full overflow-visible pointer-events-none z-20">
-
-                    {/* Ring 1: The Inner Orbit */}
-                    <motion.circle
-                        cx="200" cy="200" r="110"
-                        fill="none" stroke="#F5F5F0" strokeWidth="0.5" strokeOpacity="0.2"
-                        strokeDasharray="4 8"
-                        animate={{ rotate: 360 }}
-                        transition={{ repeat: Infinity, duration: 40, ease: "linear" }}
-                        style={{ transformOrigin: "200px 200px", transform: "translateZ(40px)" }}
+                {/* The Perturbation Rings - Now mapping to pre-defined transforms */}
+                {rings.map((ring, i) => (
+                    <motion.div
+                        key={i}
+                        className="absolute border border-white/5 rounded-full"
+                        style={{
+                            width: ring.size,
+                            height: ring.size,
+                            x: ring.x,
+                            y: ring.y,
+                        }}
                     />
+                ))}
 
-                    {/* Ring 2: The Mid Constraint */}
-                    <motion.circle
-                        cx="200" cy="200" r="160"
-                        fill="none" stroke="#F5F5F0" strokeWidth="1" strokeOpacity="0.1"
-                        animate={{ rotate: -360 }}
-                        transition={{ repeat: Infinity, duration: 60, ease: "linear" }}
-                        style={{ transformOrigin: "200px 200px", transform: "translateZ(80px)" }}
-                    />
-
-                    {/* Ring 3: The Outer Boundary (Radar Scanner) */}
-                    <motion.circle
-                        cx="200" cy="200" r="190"
-                        fill="none" stroke="#8A0303" strokeWidth="1.5" strokeOpacity="0.4"
-                        strokeDasharray="1 12"
-                        animate={{ rotate: 360 }}
-                        transition={{ repeat: Infinity, duration: 120, ease: "linear" }}
-                        style={{ transformOrigin: "200px 200px", transform: "translateZ(120px)" }}
-                    />
-                </svg>
-
-
+                {/* The Visceral Flare */}
+                <motion.div
+                    style={{ opacity: crimsonGlow }}
+                    className="absolute inset-0 bg-visceral-crimson/20 rounded-full blur-[100px] mix-blend-screen"
+                />
             </motion.div>
+
+            {/* System Readouts */}
+            <div className="absolute bottom-0 left-0 p-4 font-clinical text-[9px] tracking-[0.3em] uppercase text-white/20">
+                Status: Non-Equilibrium <br />
+                Stability: {mounted ? "Active" : "Null"}
+            </div>
         </div>
     );
 }

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Orbit, Activity, Crosshair } from "lucide-react";
+import BentoGrid from "../components/BentoGrid";
 
 // Animation Variants for Kinetic Fluidity
 const containerVariants = {
@@ -114,6 +115,7 @@ export default function LandingPage() {
                     </div>
                 </div>
             </motion.div>
+            <BentoGrid />
         </div>
     );
 }

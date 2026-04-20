@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Orbit, Activity, Crosshair } from "lucide-react";
 import BentoGrid from "../components/BentoGrid"; // Adjust to "./components/BentoGrid" if inside the app directory
 import Curriculum from "@/components/Curriculum"; // or "../components/Curriculum" depending on your pathing
+import VoidedSphere from "@/components/VoidedSphere";
 
 // Animation Variants for Kinetic Fluidity
 const containerVariants = {
@@ -60,12 +61,15 @@ export default function LandingPage() {
                         <span className="text-white/40">Over Optic Reliance.</span>
                     </motion.h1>
 
+
+
                     {/* Editorial Warmth / Prose */}
                     <motion.p
                         variants={itemVariants}
                         className="font-editorial text-xl md:text-2xl text-albedo-cream/80 max-w-2xl leading-relaxed mb-12"
                     >
-                        We are not a gym. We are a laboratory for human-centric movement.
+                        A laboratory for human-centric movement,
+                        redefining the crucible of physical interaction.
                         Replacing rote drills with ecological dynamics, profound calmness,
                         and total haptic awareness.
                     </motion.p>
@@ -81,7 +85,9 @@ export default function LandingPage() {
                         </button>
                     </motion.div>
                 </motion.div>
+                <VoidedSphere />
             </div>
+
 
             {/* Floating Diagnostic Card (Liquid Glass Example) */}
             <motion.div

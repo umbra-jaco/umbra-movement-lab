@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { Maximize, Zap, Waves, Crosshair } from "lucide-react";
 
-// Staggered animation parameters for kinetic fluidity
 const gridVariants = {
     hidden: { opacity: 0 },
     show: {
@@ -17,7 +16,7 @@ const cardVariants = {
     show: {
         opacity: 1,
         y: 0,
-        transition: { type: "spring", stiffness: 50, damping: 15 }
+        transition: { type: "spring", stiffness: 60, damping: 15 }
     },
 };
 
@@ -41,10 +40,10 @@ export default function BentoGrid() {
                 viewport={{ once: true, margin: "-100px" }}
                 className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[300px]"
             >
-                {/* Node 1: Ecological Dynamics (Hero Card) */}
-                <motion.div variants={cardVariants} className="liquid-glass p-8 flex flex-col justify-between md:col-span-2 md:row-span-2 group">
+                {/* Node 1: Ecological Dynamics */}
+                <motion.div variants={cardVariants} className="liquid-glass p-8 flex flex-col justify-between md:col-span-2 md:row-span-2 group border border-white/10 hover:border-visceral-crimson/50 transition-colors">
                     <div className="flex justify-between items-start">
-                        <span className="font-clinical text-xs tracking-[0.2em] text-phosphor-green uppercase">Core Principle 01</span>
+                        <span className="font-clinical text-xs tracking-[0.2em] text-phosphor-green uppercase">Principle 01</span>
                         <Maximize className="text-white/20 w-6 h-6 group-hover:text-albedo transition-colors duration-500" />
                     </div>
                     <div>
@@ -56,40 +55,32 @@ export default function BentoGrid() {
                 </motion.div>
 
                 {/* Node 2: Acoustic Tension */}
-                <motion.div variants={cardVariants} className="liquid-glass p-8 flex flex-col justify-between group">
+                <motion.div variants={cardVariants} className="liquid-glass p-8 flex flex-col justify-between group border border-white/10 hover:border-visceral-crimson/50 transition-colors">
                     <div className="flex justify-between items-start">
-                        <span className="font-clinical text-xs tracking-[0.2em] text-visceral-crimson uppercase">Sensory Input</span>
+                        <span className="font-clinical text-xs tracking-[0.2em] text-visceral-crimson uppercase">Sensory</span>
                         <Waves className="text-white/20 w-6 h-6 group-hover:text-albedo transition-colors duration-500" />
                     </div>
                     <div>
                         <h3 className="font-kinetic text-2xl uppercase mb-2">Acoustic Tension</h3>
                         <p className="font-sans text-sm text-white/60">
-                            Phrygian mode soundscapes paired with low-frequency drones create immediate psychological presence.
+                            Low-frequency drones create immediate psychological presence.
                         </p>
                     </div>
                 </motion.div>
 
                 {/* Node 3: Radical Occlusion */}
-                <motion.div variants={cardVariants} className="liquid-glass p-8 flex flex-col justify-between group">
+                <motion.div variants={cardVariants} className="liquid-glass p-8 flex flex-col justify-between group border border-white/10 hover:border-visceral-crimson/50 transition-colors">
                     <div className="flex justify-between items-start">
-                        <span className="font-clinical text-xs tracking-[0.2em] text-white/50 uppercase">Environmental</span>
+                        <span className="font-clinical text-xs tracking-[0.2em] text-white/50 uppercase">Environment</span>
                         <Crosshair className="text-white/20 w-6 h-6 group-hover:text-albedo transition-colors duration-500" />
                     </div>
                     <div>
                         <h3 className="font-kinetic text-2xl uppercase mb-2">Radical Occlusion</h3>
                         <p className="font-sans text-sm text-white/60">
-                            Zero mirrors. Zero fluorescent lighting. Extreme chiaroscuro spotlighting forces physical intuition.
+                            Zero mirrors. Extreme chiaroscuro spotlighting forces physical intuition.
                         </p>
                     </div>
                 </motion.div>
-
-                {/* Node 4: The Crucible Action Node */}
-                <motion.div variants={cardVariants} className="haptic-node p-8 flex flex-col justify-center items-center text-center md:col-span-3 cursor-pointer mt-4">
-                    <Zap className="text-visceral-crimson w-8 h-8 mb-4 animate-pulse" />
-                    <h3 className="font-kinetic text-3xl uppercase mb-2 text-albedo">Enter The Inner Crucible</h3>
-                    <p className="font-clinical tracking-widest text-sm text-white/50 uppercase">Initiate 4-Week Prototype Program</p>
-                </motion.div>
-
             </motion.div>
         </section>
     );

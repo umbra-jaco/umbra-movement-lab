@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Orbit, Activity, Crosshair } from "lucide-react";
-import BentoGrid from "../components/BentoGrid";
+import BentoGrid from "../components/BentoGrid"; // Adjust to "./components/BentoGrid" if inside the app directory
 
 // Animation Variants for Kinetic Fluidity
 const containerVariants = {
@@ -27,7 +27,7 @@ export default function LandingPage() {
         <div className="relative min-h-screen bg-void flex flex-col justify-center overflow-hidden">
 
             {/* Background Layer: Cinematic Spotlight Simulation
-        (Replace this div with your actual looping cinematic B-Roll <video> tag later)
+          (Replace this div with your actual looping cinematic B-Roll <video> tag later)
       */}
             <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-umbra-navy/20 via-void to-void opacity-80" />
 
@@ -115,7 +115,10 @@ export default function LandingPage() {
                     </div>
                 </div>
             </motion.div>
+
+            {/* Phase 3: The Lagrangian Physics Grid */}
             <BentoGrid />
+
         </div>
     );
 }

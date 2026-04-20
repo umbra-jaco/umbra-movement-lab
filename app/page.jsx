@@ -1,81 +1,119 @@
-import React from 'react';
+"use client";
 
-export default function HomePage() {
+import { motion } from "framer-motion";
+import { ArrowRight, Orbit, Activity, Crosshair } from "lucide-react";
+
+// Animation Variants for Kinetic Fluidity
+const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 1,
+        transition: { staggerChildren: 0.2, delayChildren: 0.3 },
+    },
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: { type: "spring", stiffness: 60, damping: 12 }
+    },
+};
+
+export default function LandingPage() {
     return (
-        <main className="min-h-screen flex flex-col items-center p-6 lg:p-12 relative z-0">
+        <div className="relative min-h-screen bg-void flex flex-col justify-center overflow-hidden">
 
-            {/* Liquid Glass Navigation */}
-            <header className="w-full max-w-7xl flex justify-between items-center py-5 px-8 liquid-glass rounded-2xl mb-24 sticky top-6 z-50">
-                <h1 className="text-3xl tracking-widest uppercase font-headline font-extrabold text-cloud-dancer">
-                    UMBRA
-                </h1>
-                <nav className="hidden md:flex gap-10 font-technical text-sm tracking-widest uppercase text-cloud-dancer/80">
-                    <a href="#crucible" className="hover:text-electric-orange transition-colors duration-300">The Crucible</a>
-                    <a href="#mechanics" className="hover:text-electric-orange transition-colors duration-300">Mechanics</a>
-                </nav>
-                {/* High-contrast CTA */}
-                <button className="bg-electric-orange text-umbra-navy px-8 py-3 rounded-full font-bold font-technical text-sm tracking-wider hover:bg-cloud-dancer hover:scale-105 transition-all duration-300">
-                    ENTER LAB
-                </button>
-            </header>
+            {/* Background Layer: Cinematic Spotlight Simulation
+        (Replace this div with your actual looping cinematic B-Roll <video> tag later)
+      */}
+            <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-umbra-navy/20 via-void to-void opacity-80" />
 
-            {/* Cinematic Hero Section */}
-            <section className="w-full max-w-5xl text-center z-10 mb-32 flex flex-col items-center">
-                <h2 className="text-6xl md:text-8xl font-headline font-extrabold mb-8 leading-none tracking-tight">
-                    Absolute Presence. <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-cloud-dancer to-cool-blue">
-            Radical Occlusion.
-          </span>
-                </h2>
-                <p className="text-xl md:text-2xl font-editorial italic text-cloud-dancer/80 mb-12 max-w-2xl leading-relaxed">
-                    Rejecting the optic for the haptic. Step into the Inner Crucible where movement is a private, essential ritual mathematically optimized for your biomechanical trajectory.
-                </p>
-                <button className="liquid-glass text-cloud-dancer border-electric-orange/40 hover:border-electric-orange px-10 py-5 rounded-full text-lg font-technical tracking-widest transition-all duration-500 shadow-[0_0_30px_rgba(247,65,37,0.15)] hover:shadow-[0_0_40px_rgba(247,65,37,0.3)]">
-                    INITIATE PROTOCOL
-                </button>
-            </section>
+            {/* Grid Overlay for Brutalist/CAD-style scaling */}
+            <div className="absolute inset-0 z-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] mix-blend-overlay" />
 
-            {/* Asymmetric Bento Grid Architecture */}
-            <section id="mechanics" className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-12 gap-6 z-10">
+            {/* Main Hero Architecture */}
+            <div className="container relative z-10 mx-auto px-6 pt-32 pb-24 md:pt-48">
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="show"
+                    className="max-w-5xl"
+                >
+                    {/* Clinical Data Accent */}
+                    <motion.div variants={itemVariants} className="flex items-center gap-3 mb-8">
+                        <Orbit className="text-visceral-crimson w-5 h-5 animate-[spin_10s_linear_infinite]" />
+                        <span className="font-clinical text-xs tracking-[0.3em] uppercase text-visceral-crimson">
+              Protocol: Inner Crucible
+            </span>
+                    </motion.div>
 
-                {/* Primary Analytical Block */}
-                <div className="liquid-glass rounded-3xl p-10 md:col-span-8 flex flex-col justify-end min-h-[400px] relative overflow-hidden group">
-                    <div className="absolute inset-0 bg-gradient-to-tr from-umbra-navy/90 via-transparent to-transparent z-0" />
-                    <div className="relative z-10 transition-transform duration-500 group-hover:translate-x-2">
-                        <h3 className="text-4xl font-headline font-bold mb-4 text-cloud-dancer">Lagrangian Mechanics</h3>
-                        <p className="font-technical text-base leading-relaxed text-cloud-dancer/70 max-w-lg">
-                            We do not subject the body to random exertion. Guided by the Principle of Least Action, we mathematically eliminate mechanical jerk to unlock seamless, highly sustainable physical expression.
-                        </p>
-                    </div>
+                    {/* Kinetic Headline */}
+                    <motion.h1
+                        variants={itemVariants}
+                        className="font-kinetic text-5xl md:text-7xl lg:text-8xl font-bold uppercase leading-[0.9] tracking-tighter mb-8"
+                    >
+                        Haptic Dominance <br />
+                        <span className="text-white/40">Over Optic Reliance.</span>
+                    </motion.h1>
+
+                    {/* Editorial Warmth / Prose */}
+                    <motion.p
+                        variants={itemVariants}
+                        className="font-editorial text-xl md:text-2xl text-albedo-cream/80 max-w-2xl leading-relaxed mb-12"
+                    >
+                        We are not a gym. We are a laboratory for human-centric movement.
+                        Replacing rote drills with ecological dynamics, profound calmness,
+                        and total haptic awareness.
+                    </motion.p>
+
+                    {/* Action Nodes */}
+                    <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-6">
+                        <button className="haptic-node font-clinical uppercase tracking-widest text-sm px-8 py-5 flex items-center justify-center gap-3 text-albedo-cream group">
+                            Initiate Assessment
+                            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 text-visceral-crimson" />
+                        </button>
+                        <button className="liquid-glass font-clinical uppercase tracking-widest text-sm px-8 py-5 flex items-center justify-center text-albedo-cream hover:bg-white/10 transition-colors">
+                            Read The Codex
+                        </button>
+                    </motion.div>
+                </motion.div>
+            </div>
+
+            {/* Floating Diagnostic Card (Liquid Glass Example) */}
+            <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 1.2, duration: 0.8, type: "spring" }}
+                className="hidden lg:flex absolute right-12 bottom-24 liquid-glass p-6 flex-col gap-4 max-w-xs"
+            >
+                <div className="flex items-center justify-between border-b border-white/10 pb-4 mb-2">
+                    <span className="font-clinical text-xs tracking-widest uppercase text-white/50">Live Matrix</span>
+                    <Activity className="text-phosphor-green w-4 h-4" />
                 </div>
 
-                {/* Sensory Protocol Block */}
-                <div className="liquid-glass rounded-3xl p-10 md:col-span-4 flex flex-col justify-between min-h-[400px] group">
-                    <div className="w-14 h-14 rounded-full bg-cool-blue/20 flex items-center justify-center border border-cool-blue/30 group-hover:bg-electric-orange/20 group-hover:border-electric-orange/50 transition-all duration-500">
-                        <div className="w-3 h-3 bg-cloud-dancer rounded-full group-hover:bg-electric-orange transition-colors" />
+                <div className="space-y-4">
+                    <div>
+                        <div className="flex items-center justify-between mb-1">
+                            <span className="font-clinical text-xs text-white/70">Kinetic Flow</span>
+                            <span className="font-clinical text-xs text-phosphor-green">Optimized</span>
+                        </div>
+                        <div className="w-full h-1 bg-void-black overflow-hidden">
+                            <div className="w-[85%] h-full bg-phosphor-green/80" />
+                        </div>
                     </div>
                     <div>
-                        <h3 className="text-2xl font-headline font-bold mb-3 text-cloud-dancer">Haptic Dominance</h3>
-                        <p className="font-technical text-sm text-cloud-dancer/70 leading-relaxed">
-                            Mirrors removed. Low drones engaged. Threat perception minimized. Focus directed entirely inward to the crucible.
-                        </p>
+                        <div className="flex items-center justify-between mb-1">
+                            <span className="font-clinical text-xs text-white/70">Visual Noise</span>
+                            <span className="font-clinical text-xs text-white/40">Eliminated</span>
+                        </div>
+                        <div className="w-full h-1 bg-void-black overflow-hidden">
+                            <div className="w-[10%] h-full bg-visceral-crimson/80" />
+                        </div>
                     </div>
                 </div>
-
-                {/* Conversion / Prototype Block */}
-                <div className="liquid-glass rounded-3xl p-10 md:col-span-12 flex flex-col md:flex-row items-center justify-between min-h-[250px] border-l-4 border-l-electric-orange">
-                    <div className="mb-8 md:mb-0 max-w-2xl">
-                        <h3 className="text-3xl font-headline font-bold mb-4 text-cloud-dancer">The 4-Week Prototype</h3>
-                        <p className="font-editorial text-xl italic text-cloud-dancer/80">
-                            Begin your transformation with our specialized foundational loop. Engineered specifically for non-athletic demographics seeking profound internal reconstruction.
-                        </p>
-                    </div>
-                    <button className="bg-cloud-dancer text-umbra-navy px-10 py-5 rounded-full font-bold font-technical tracking-widest hover:bg-electric-orange hover:text-cloud-dancer transition-all duration-300 w-full md:w-auto text-center">
-                        RESERVE SPACE
-                    </button>
-                </div>
-
-            </section>
-        </main>
+            </motion.div>
+        </div>
     );
 }

@@ -1,44 +1,72 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  :root {
-    --background: #050505; /* Void Black base */
-    --foreground: #F5F5F0; /* Albedo Cream */
-    --border: #1A1A1A;
-    --input: #1A1A1A;
-    --ring: #01153D; /* Umbra Navy */
+/* UMBRA DESIGN SYSTEM - TAILWIND V4
+  Injecting the Chiaroscuro palette and Dual-Typeface logic
+*/
+@theme {
+  --color-void: #050505;
+  --color-void-black: #000000;
+  --color-albedo: #F5F5F0;
+  --color-albedo-cream: #EAEAE5;
+  --color-umbra-navy: #01153D;
+  --color-umbra-blue: #0047AB;
+  --color-visceral-crimson: #8A0303;
+  --color-visceral-blood: #5E0202;
+  --color-phosphor-green: #39FF14;
 
-    --primary: #F5F5F0;
-    --primary-foreground: #050505;
+  /* The Free Google Font Stack */
+  --font-arcane: var(--font-cinzel), serif;
+  --font-kinetic: var(--font-syne), sans-serif;
+  --font-editorial: var(--font-fraunces), serif;
+  --font-clinical: var(--font-space-grotesk), sans-serif;
+  --font-sans: var(--font-inter), sans-serif;
+
+  /* Kinetic Fluidity Animations */
+  --animate-kinetic-fade: kineticFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  @keyframes kineticFade {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
   }
 }
 
+/* Base Atmospheric Layer */
 @layer base {
-  * {
-    @apply border-border;
+  :root {
+    --background: #050505;
+    --foreground: #F5F5F0;
+    --border: #1A1A1A;
   }
+
   body {
-    @apply bg-background text-foreground font-inter antialiased selection:bg-visceral-crimson selection:text-albedo;
-    /* Forces horizontal scroll off for kinetic animations */
+    background-color: var(--color-void);
+    color: var(--color-albedo);
     overflow-x: hidden;
   }
 
-  /* Typography Scale Overrides */
+  /* All headings default to the wide, brutalist Kinetic font */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-cabinet tracking-tight;
+    font-family: var(--font-kinetic);
+    letter-spacing: -0.025em;
   }
 }
 
+/* Native CSS Component Utilities */
 @layer utilities {
-  /* Liquid Glass Component Utility */
   .liquid-glass {
-    @apply bg-void-black/40 backdrop-blur-md border border-white/5 shadow-2xl;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
   }
 
-  /* Haptic Icon Utility */
   .haptic-node {
-    @apply bg-void shadow-haptic-emboss transition-all duration-300 active:shadow-haptic-pressed;
+    background-color: #050505;
+    box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.05), inset -2px -2px 4px rgba(0, 0, 0, 0.5), 2px 2px 8px rgba(0,0,0,0.8);
+    transition: all 0.3s ease;
+  }
+
+  .haptic-node:active {
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.8), inset -2px -2px 4px rgba(255, 255, 255, 0.02);
   }
 }

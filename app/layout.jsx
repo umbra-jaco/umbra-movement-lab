@@ -1,37 +1,30 @@
-import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
-import localFont from "next/font/local";
+import { Inter, Space_Grotesk, Fraunces, Syne, Cinzel_Decorative } from "next/font/google";
 import "./globals.css";
 
-// The Clinical Anchors
+// Instantiate the Free Google Fonts
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk" });
+const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces" });
+const syne = Syne({ subsets: ["latin"], variable: "--font-syne" });
+const cinzel = Cinzel_Decorative({ weight: ["400", "700", "900"], subsets: ["latin"], variable: "--font-cinzel" });
 
-// Local Custom Fonts (Place your .woff2 files in /public/fonts/)
-const cabinet = localFont({
-    src: "../public/fonts/CabinetGrotesk-Variable.woff2",
-    variable: "--font-cabinet",
-});
-
-const fraunces = localFont({
-    src: "../public/fonts/Fraunces-VariableFont_SOFT,WONK,opsz,wght.woff2",
-    variable: "--font-fraunces",
-});
-
-export const metadata: Metadata = {
+export const metadata = {
     title: "UMBRA | Movement Labs",
     description: "Haptic dominance over optic reliance. The Inner Crucible.",
 };
 
-export default function RootLayout({
-                                       children,
-                                   }: Readonly<{
-    children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }) {
     return (
         <html lang="en" className="dark">
         <body
-            className={`${inter.variable} ${spaceGrotesk.variable} ${cabinet.variable} ${fraunces.variable} bg-void text-albedo`}
+            className={`
+          ${inter.variable} 
+          ${spaceGrotesk.variable} 
+          ${fraunces.variable} 
+          ${syne.variable} 
+          ${cinzel.variable} 
+          bg-void text-albedo antialiased selection:bg-visceral-crimson selection:text-albedo
+        `}
         >
         {/* The Atmospheric Noise Layer - 5% Opacity Film Grain */}
         <div

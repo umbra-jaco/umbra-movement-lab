@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Orbit, Activity, Crosshair } from "lucide-react";
 import BentoGrid from "../components/BentoGrid"; // Adjust to "./components/BentoGrid" if inside the app directory
+import Curriculum from "@/components/Curriculum"; // or "../components/Curriculum" depending on your pathing
 
 // Animation Variants for Kinetic Fluidity
 const containerVariants = {
@@ -115,9 +116,8 @@ export default function LandingPage() {
                     </div>
                 </div>
             </motion.div>
-
-            {/* Phase 3: The Lagrangian Physics Grid */}
             <BentoGrid />
+            <Curriculum />
 
         </div>
     );

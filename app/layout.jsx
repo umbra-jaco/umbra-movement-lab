@@ -1,4 +1,5 @@
 import { Inter, Space_Grotesk, Fraunces, Syne, Cinzel_Decorative } from "next/font/google";
+import Footer from "@/components/Footer"; // <-- Add this import
 import "./globals.css";
 
 // Instantiate the Free Google Fonts
@@ -26,7 +27,7 @@ export default function RootLayout({ children }) {
           bg-void text-albedo antialiased selection:bg-visceral-crimson selection:text-albedo
         `}
         >
-        {/* The Atmospheric Noise Layer - 5% Opacity Film Grain */}
+        {/* The Atmospheric Noise Layer */}
         <div
             className="pointer-events-none fixed inset-0 z-50 h-full w-full opacity-5 mix-blend-overlay bg-[url('/noise.svg')]"
             aria-hidden="true"
@@ -34,7 +35,11 @@ export default function RootLayout({ children }) {
 
         {/* Main Application Node */}
         <main className="relative z-10 flex min-h-screen flex-col">
-            {children}
+            <div className="flex-1">
+                {children}
+            </div>
+            {/* Global Footer Injection */}
+            <Footer />
         </main>
         </body>
         </html>

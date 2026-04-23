@@ -13,5 +13,10 @@
   "images": {
     "binding": "IMAGES"
   },
-  "r2_buckets": []
+  "r2_buckets": [
+    {
+      "binding": "NEXT_INC_CACHE_R2_BUCKET",
+      "bucket_name": "umbra-assets"
+    }
+  ]
 }

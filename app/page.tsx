@@ -12,7 +12,7 @@ export default function FourWeekProgram() {
                 {/* THE R2 BACKGROUND ASSET */}
                 <div className="absolute inset-0 opacity-40 pointer-events-none">
                     <Image
-                        src={getAsset('laboratory/spaces/Backgrounds/ChatGPT Image May 4, 2026, 09_08_58 PM.png')}
+                        src={getAsset('laboratory/spaces/Backgrounds/BG10.png')}
                         alt="Umbra Space"
                         fill
                         className="object-cover"

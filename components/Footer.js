@@ -28,9 +28,6 @@ export default function Footer() {
                     <div>
                         <h4 className="font-clinical text-xs tracking-[0.2em] uppercase text-white/60 mb-6">The Manifold</h4>
                         <ul className="space-y-4 font-clinical text-sm tracking-widest uppercase text-white/30">
-                            <li><Link href="/lab" className="hover:text-albedo transition-colors">The Lab</Link></li>
-                            <li><Link href="/curriculum" className="hover:text-albedo transition-colors">Curriculum</Link></li>
-                            <li><Link href="/artifacts" className="hover:text-albedo transition-colors">Ascendant Artifacts</Link></li>
                             <li><Link href="/philosophy" className="hover:text-albedo transition-colors">Philosophy</Link></li>
                         </ul>
                     </div>
@@ -38,8 +35,8 @@ export default function Footer() {
                     <div>
                         <h4 className="font-clinical text-xs tracking-[0.2em] uppercase text-white/60 mb-6">Coordinates</h4>
                         <ul className="space-y-4 font-clinical text-sm tracking-widest uppercase text-white/30">
-                            <li><a href="#" className="hover:text-albedo transition-colors">Instagram</a></li>
-                            <li><a href="#" className="hover:text-albedo transition-colors">Secure Line</a></li>
+                            <li><a href="https://instagram.com/umbramovement" className="hover:text-albedo transition-colors">Instagram</a></li>
+
                             <li><span className="text-visceral-crimson">Unlisted Location</span></li>
                         </ul>
                     </div>

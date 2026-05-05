@@ -16,26 +16,8 @@ export default function PhilosophyNode() {
           </span>
                 </h1>
                 <p className="max-w-2xl text-lg md:text-xl text-neutral-400 leading-relaxed font-light">
-                    UMBRA is not a gym. It is a laboratory for human-centric movement. We explicitly reject the ego-driven vernacular and overt aggression of traditional combat sports. Our goal is singular: to guide individuals through self-discovery, fostering haptic awareness, profound calmness, and the ability to solve physical problems with the body.
+                    UMBRA is a laboratory for human-centric movement. We explicitly reject the ego-driven vernacular and overt aggression of traditional combat sports. Our goal is singular: to guide individuals through self-discovery, fostering haptic awareness, profound calmness, and the ability to solve physical problems with the body.
                 </p>
-            </section>
-
-            {/* Lineage Section */}
-            <section className="px-6 py-24 md:px-20 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-white/10">
-                <div className="lg:col-span-4">
-                    <h2 className="text-2xl md:text-3xl uppercase tracking-widest font-bold" style={{ fontFamily: 'var(--font-exocet, serif)' }}>
-                        The Lineage
-                    </h2>
-                    <div className="h-1 w-12 bg-[#8A0303] mt-6"></div>
-                </div>
-                <div className="lg:col-span-8 text-neutral-300 text-lg leading-relaxed space-y-6">
-                    <p>
-                        The physical vocabulary of UMBRA is forged in the pressure-tested reality of the <strong className="text-white font-medium">Cesar Gracie</strong> Jiu-Jitsu lineage. However, we have distilled this combat architecture down to its purest kinetic essence.
-                    </p>
-                    <p>
-                        By stripping away the dogma of competition and warfare, what remains is an elegant, highly effective system of leverage, balance, and survival. We do not train to fight; we train to isolate variables, manage extreme physical pressure, and adapt to chaos without surrendering our internal peace.
-                    </p>
-                </div>
             </section>
 
             {/* The Science: Ecological Dynamics Bento Grid */}

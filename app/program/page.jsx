@@ -79,7 +79,7 @@ export default function LandingPage() {
                         {/* Action Nodes */}
                         <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-6">
                             <Link
-                                href="/access"
+                                href="https://instagram.com/umbramovement"
                                 className="haptic-node font-clinical uppercase tracking-widest text-sm px-10 py-5 flex items-center justify-center gap-3 text-albedo group border border-white/10 hover:border-visceral-crimson transition-all duration-500"
                             >
                                 Initiate Assessment

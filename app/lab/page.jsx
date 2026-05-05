@@ -113,7 +113,7 @@ export default function LabNode() {
                         </div>
 
                         <Link
-                            href="/access"
+                            href="https://instagram.com/umbramovement"
                             className="group flex items-center gap-6 p-8 border border-white/10 bg-white/5 hover:border-visceral-crimson transition-all duration-500"
                         >
                             <div className="space-y-1">

@@ -71,13 +71,22 @@ export default function FourWeekProgram() {
                         </li>
                     </ul>
 
-                    <div className="pt-8 border-t border-zinc-800">
+                    <div className="pt-8 border-t border-zinc-800 flex flex-col gap-4">
+                        {/* PRIMARY: Instagram DM */}
                         <Link
                             href="https://instagram.com/umbramovement"
                             target="_blank"
                             className="inline-block w-full text-center bg-zinc-100 text-black font-bold uppercase tracking-widest py-4 hover:bg-zinc-300 transition-colors duration-200"
                         >
                             DM to Secure Your Spot
+                        </Link>
+
+                        {/* SECONDARY: Direct Email */}
+                        <Link
+                            href="mailto:intake@umbramovementlab.com?subject=UMBRA%204-Week%20Crucible%20Inquiry"
+                            className="inline-block w-full text-center bg-transparent border border-zinc-600 text-zinc-300 font-bold uppercase tracking-widest py-4 hover:border-zinc-300 hover:text-white transition-all duration-200"
+                        >
+                            Contact via Email
                         </Link>
                     </div>
                 </div>

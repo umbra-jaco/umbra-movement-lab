@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getAsset } from "@/lib/utils";
 
 export default function FourWeekProgram() {
     return (
@@ -7,20 +8,30 @@ export default function FourWeekProgram() {
 
             {/* HERO SECTION */}
             <section className="relative flex flex-col items-center justify-center min-h-[85vh] px-6 text-center border-b border-zinc-800 overflow-hidden">
-                {/* Optional: Drop one of your tall chiaroscuro space images in the background with low opacity */}
-                <div className="absolute inset-0 opacity-20 pointer-events-none">
-                    {/* <Image src={getAsset('laboratory/spaces/uml-tall-chiaroscuro.png')} alt="Umbra Space" fill className="object-cover" /> */}
+
+                {/* THE R2 BACKGROUND ASSET */}
+                <div className="absolute inset-0 opacity-40 pointer-events-none">
+                    <Image
+                        src={getAsset('laboratory/spaces/Backgrounds/ChatGPT Image May 4, 2026, 09_08_58 PM.png')}
+                        alt="Umbra Space"
+                        fill
+                        className="object-cover"
+                        unoptimized
+                        priority
+                    />
+                    {/* Dark Gradient Overlay to ensure the white text remains legible */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-[#111111]/40 to-[#111111]/80"></div>
                 </div>
 
                 <div className="relative z-10 max-w-4xl mx-auto space-y-8">
                     <h1 className="text-5xl md:text-8xl font-black tracking-tighter uppercase text-zinc-100 drop-shadow-md">
                         Umbra
                     </h1>
-                    <p className="text-xl md:text-2xl font-light tracking-widest text-zinc-400 uppercase">
+                    <p className="text-xl md:text-2xl font-light tracking-widest text-zinc-400 uppercase drop-shadow-sm">
                         A Human-Centric Movement Lab
                     </p>
 
-                    <div className="w-24 h-1 bg-zinc-700 mx-auto mt-8"></div>
+                    <div className="w-24 h-1 bg-red-900 mx-auto mt-8 opacity-80"></div>
                 </div>
             </section>
 

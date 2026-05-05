@@ -83,7 +83,7 @@ export default function FourWeekProgram() {
 
                         {/* SECONDARY: Direct Email */}
                         <Link
-                            href="mailto:intake@umbramovementlab.com?subject=UMBRA%204-Week%20Crucible%20Inquiry"
+                            href="mailto:info@umbramovementlab.com?subject=UMBRA%204-Week%20Crucible%20Inquiry"
                             className="inline-block w-full text-center bg-transparent border border-zinc-600 text-zinc-300 font-bold uppercase tracking-widest py-4 hover:border-zinc-300 hover:text-white transition-all duration-200"
                         >
                             Contact via Email

@@ -19,6 +19,18 @@ export default function Header() {
                 {/* Global Navigation - Clinical Precision */}
                 <nav className="flex gap-8 items-center">
                     <Link
+                        href="/book"
+                        className="font-space-grotesk text-sm uppercase tracking-[0.2em] text-albedo/70 hover:text-visceral-crimson transition-colors duration-300"
+                    >
+                        RSVP
+                    </Link>
+                    <Link
+                        href="https://instagram.com/umbramovement"
+                        className="font-space-grotesk text-sm uppercase tracking-[0.2em] text-albedo/70 hover:text-visceral-crimson transition-colors duration-300"
+                    >
+                        CONTACT
+                    </Link>
+                    <Link
                         href="/philosophy"
                         className="font-space-grotesk text-sm uppercase tracking-[0.2em] text-albedo/70 hover:text-visceral-crimson transition-colors duration-300"
                     >
@@ -26,17 +38,10 @@ export default function Header() {
                     </Link>
                     <Link
                         href="/lexicon"
-                        className="liquid-glass font-clinical uppercase tracking-widest text-sm px-8 py-5 flex items-center justify-center text-albedo-cream hover:bg-white/10 transition-colors border border-white/10"
+                        className="font-space-grotesk text-sm uppercase tracking-[0.2em] text-albedo/70 hover:text-visceral-crimson transition-colors duration-300"
                     >
                         LEXICON
                     </Link>
-                    <Link
-                        href="https://instagram.com/umbramovement"
-                        className="liquid-glass font-clinical uppercase tracking-widest text-sm px-8 py-5 flex items-center justify-center text-albedo-cream hover:bg-white/10 transition-colors border border-white/10"
-                    >
-                        CONTACT
-                    </Link>
-
 
                     {/* Future navigation items go here */}
                 </nav>

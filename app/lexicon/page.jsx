@@ -205,9 +205,8 @@ export default function LexiconNode() {
                     <h1 className="font-kinetic text-6xl md:text-8xl uppercase tracking-tighter mb-8 leading-none">
                         The <span className="text-visceral-crimson">Lexicon.</span>
                     </h1>
-                    <p className="font-editorial text-xl text-white/50 leading-relaxed italic max-w-2xl">
-                        "If you cannot name the constraint, you cannot navigate the manifold."
-                        A complete decryption of our movement architecture.
+                    <p className="font-editorial text-xl text-white/50 leading-relaxed max-w-2xl">
+                        Movement science has its own language. These are the terms you will hear in the lab, and what they actually mean for your body.
                     </p>
                 </header>
 

@@ -20,9 +20,9 @@ export default function Header() {
                 <nav className="flex gap-8 items-center">
                     <Link
                         href="/book"
-                        className="font-space-grotesk text-sm uppercase tracking-[0.2em] text-albedo/70 hover:text-visceral-crimson transition-colors duration-300"
+                        className="px-4 py-2 border border-visceral-crimson text-sm uppercase tracking-[0.2em] text-albedo hover:bg-visceral-crimson transition-colors duration-300"
                     >
-                        RSVP
+                        Book Now
                     </Link>
                     <Link
                         href="https://instagram.com/umbramovement"

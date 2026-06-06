@@ -15,7 +15,7 @@ export default function IntakeGateway() {
                         Liability & Intake
                     </h1>
                     <p className="text-lg text-zinc-500 font-light max-w-2xl">
-                        Entry to the laboratory is finalized upon execution of the digital waiver.
+                        One last thing. Sign the waiver and your spot is confirmed.
                     </p>
                 </div>
 
@@ -38,7 +38,7 @@ export default function IntakeGateway() {
                 {/* FOOTER NAV */}
                 <div className="pt-8 text-center">
                     <Link href="/" className="text-xs font-mono text-zinc-600 hover:text-zinc-300 transition-colors uppercase tracking-widest">
-                        ← Abort Transmission / Return to Surface
+                        ← Back to Home
                     </Link>
                 </div>
 

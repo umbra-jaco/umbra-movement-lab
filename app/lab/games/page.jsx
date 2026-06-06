@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Shuffle, Filter, Clock, ChevronDown, ChevronUp, Search } from "lucide-react";
+import Link from "next/link";
 import gamesData, { phaseNames, positions } from "@/lib/games";
 
 export default function GamesLab() {

@@ -16,7 +16,7 @@ export default function PhilosophyNode() {
           </span>
                 </h1>
                 <p className="max-w-2xl text-lg md:text-xl text-neutral-400 leading-relaxed font-light">
-                    UMBRA is a laboratory for human-centric movement. We explicitly reject the ego-driven vernacular and overt aggression of traditional combat sports. Our goal is singular: to guide individuals through self-discovery, fostering haptic awareness, profound calmness, and the ability to solve physical problems with the body.
+                    Most people think martial arts is about learning to fight. We think it is about learning to move, breathe, and adapt, and the fighting comes naturally as a side effect. No rigid forms. No memorized sequences. Just you, a problem to solve, and your body figuring it out in real time.
                 </p>
             </section>
 
@@ -26,6 +26,9 @@ export default function PhilosophyNode() {
                     <h2 className="text-3xl md:text-5xl uppercase tracking-tight font-bold mb-4" style={{ fontFamily: 'var(--font-exocet, serif)' }}>
                         Ecological Dynamics
                     </h2>
+                    <p className="text-neutral-400 max-w-2xl text-lg mb-6">
+                        Instead of drilling moves until they are robotic, we set up games and constraints that make your nervous system teach itself. The result is movement that feels fluid, adaptable, and like it was always yours.
+                    </p>
                     <p className="text-neutral-400 max-w-2xl text-lg">
                         UMBRA discards the outdated model of rote memorization and static drilling. Learning emerges through interaction, constraints, and the environment. We are guided by the architects of modern movement science.
                     </p>
@@ -91,7 +94,7 @@ export default function PhilosophyNode() {
                     No techniques to memorize. Just problem-solving with your body. A more human way to learn movement.
                 </p>
                 <button className="px-8 py-4 bg-white text-black text-sm uppercase tracking-[0.2em] font-bold hover:bg-[#8A0303] hover:text-white transition-colors duration-300">
-                    Enter The Lab
+                    Ready to Move?
                 </button>
             </section>
 

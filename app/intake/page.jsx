@@ -2,26 +2,23 @@ import Link from "next/link";
 
 export default function IntakeGateway() {
     return (
-        <main className="min-h-screen bg-[#111111] text-zinc-300 font-sans selection:bg-red-900 selection:text-white flex flex-col items-center py-12 px-4 md:py-20">
+        <main className="min-h-screen bg-void text-bone font-sans selection:bg-visceral-crimson selection:text-royal-white flex flex-col items-center py-12 px-4 md:py-20">
 
             <div className="w-full max-w-4xl space-y-10">
 
-                {/* STATUS HEADER */}
-                <div className="border-b border-zinc-800 pb-8 space-y-4 text-center md:text-left">
-                    <p className="text-red-900 font-mono tracking-[0.2em] uppercase text-xs font-bold">
+                <div className="border-b border-elevated pb-8 space-y-4 text-center md:text-left">
+                    <p className="font-clinical text-[10px] tracking-[0.3em] uppercase text-visceral-crimson font-bold">
                         Status: Slot Conditionally Held
                     </p>
-                    <h1 className="text-4xl md:text-6xl font-black tracking-tighter uppercase text-white">
+                    <h1 className="text-4xl md:text-6xl font-black tracking-tighter uppercase text-royal-white">
                         Liability & Intake
                     </h1>
-                    <p className="text-lg text-zinc-500 font-light max-w-2xl">
+                    <p className="text-concrete text-sm max-w-2xl">
                         One last thing. Sign the waiver and your spot is confirmed.
                     </p>
                 </div>
 
-                {/* THE WAIVER TERMINAL */}
-                <div className="relative w-full border border-zinc-800 bg-[#0a0a0a] shadow-2xl overflow-hidden">
-                    {/* JOTFORM EMBED */}
+                <div className="relative w-full border border-elevated bg-surface shadow-2xl overflow-hidden">
                     <iframe
                         id="JotFormIFrame-261240891992060"
                         title="UMBRA Waiver"
@@ -35,10 +32,9 @@ export default function IntakeGateway() {
                     />
                 </div>
 
-                {/* FOOTER NAV */}
                 <div className="pt-8 text-center">
-                    <Link href="/" className="text-xs font-mono text-zinc-600 hover:text-zinc-300 transition-colors uppercase tracking-widest">
-                        ← Back to Home
+                    <Link href="/" className="font-clinical text-[10px] tracking-[0.3em] uppercase text-concrete hover:text-royal-white transition-colors">
+                        &larr; Back to Home
                     </Link>
                 </div>
 

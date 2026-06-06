@@ -8,28 +8,28 @@ const curriculumData = [
         week: "Phase 01",
         title: "Threshold & Connection",
         icon: <Fingerprint className="w-6 h-6 text-visceral-crimson" />,
-        description: "Immediate live resistance through strict constraints. We eliminate dead-pattern drilling. Day 1 focuses on grip dynamics, base disruption, and kinesthetic listening.",
+        description: "You will learn to feel where your weight is, how to connect through your hands, and how to stay balanced when someone tries to move you. Day 1 focuses on grip dynamics, base disruption, and kinesthetic listening.",
         objective: "Maintenance of the Internal Column."
     },
     {
         week: "Phase 02",
         title: "Force Dissipation",
         icon: <Activity className="w-6 h-6 text-phosphor-green" />,
-        description: "Understanding gravity and momentum as environmental constants. Practitioners learn Kuzushi (off-balancing) via ecological games and energy redirection.",
+        description: "Discover how momentum works with your body, not against it. A small shift can redirect an entire person's force. You will learn Kuzushi (off-balancing) via ecological games and energy redirection.",
         objective: "Redefining the dissipative system."
     },
     {
         week: "Phase 03",
         title: "Adaptive Architecture",
         icon: <Layers className="w-6 h-6 text-albedo" />,
-        description: "Navigating complexity. We introduce variable boundaries that force the CNS to self-organize without conscious, rote instruction.",
+        description: "Face unpredictable situations that force your brain to find new solutions. No two rounds feel the same. We introduce variable boundaries that force the CNS to self-organize without conscious instruction.",
         objective: "Systemic self-organization."
     },
     {
         week: "Phase 04",
         title: "The Inner Crucible",
         icon: <Flame className="w-6 h-6 text-visceral-blood" />,
-        description: "Full systemic integration. Transitioning from isolated games to a continuous flow of movement with minimal optic reliance.",
+        description: "Flow continuously through problems, relying on feel rather than sight. This is where it all clicks. Transition from isolated games to a continuous flow of movement with minimal optic reliance.",
         objective: "Total immersion: The UMBRA Protocol."
     }
 ];
@@ -57,8 +57,8 @@ export default function CurriculumPage() {
                     <h1 className="font-kinetic text-5xl md:text-8xl uppercase tracking-tighter text-albedo mb-8">
                         The <span className="text-visceral-crimson">Curriculum</span>
                     </h1>
-                    <p className="font-editorial text-xl text-white/50 leading-relaxed italic">
-                        "We do not teach movement; we create the constraints that make efficient movement the only possible outcome."
+                    <p className="font-editorial text-xl text-white/50 leading-relaxed max-w-3xl">
+                        Four phases, four Saturdays. Each session builds on the last. By the end, you will not just know how to move. You will trust your body to figure it out under pressure.
                     </p>
                 </header>
 
@@ -110,6 +110,9 @@ export default function CurriculumPage() {
                             <h2 className="font-kinetic text-2xl uppercase tracking-tighter text-albedo mb-4">
                                 Principle of Least Action
                             </h2>
+                            <p className="font-editorial text-sm text-white/30 italic max-w-xl mb-4">
+                                A fancy way of saying your body always finds the easiest path. We just help it see the options.
+                            </p>
                             <p className="font-clinical text-[11px] text-white/30 leading-relaxed uppercase tracking-[0.15em]">
                                 Optimization is found in the path of least resistance.
                                 By minimizing the action integral, the system achieves

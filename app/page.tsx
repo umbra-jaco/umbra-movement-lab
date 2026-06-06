@@ -107,11 +107,11 @@ export default function FourWeekProgram() {
                         </Link>
                         {/* PRIMARY: Instagram DM */}
                         <Link
-                            href="https://instagram.com/umbramovementlab"
+                            href="https://instagram.com/umbramovement"
                             target="_blank"
                             className="inline-block w-full text-center bg-zinc-100 text-black font-bold uppercase tracking-widest py-4 hover:bg-zinc-300 transition-colors duration-200"
                         >
-                            Follow @umbramovementlab
+                            Follow @umbramovement
                         </Link>
                         {/* SECONDARY: Direct Email */}
                         <Link

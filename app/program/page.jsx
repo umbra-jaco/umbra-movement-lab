@@ -61,8 +61,8 @@ export default function LandingPage() {
                             variants={itemVariants}
                             className="font-kinetic text-5xl md:text-7xl lg:text-8xl font-bold uppercase leading-[0.9] tracking-tighter mb-8"
                         >
-                            Haptic Dominance <br />
-                            <span className="text-white/40 italic">Over Optic Reliance.</span>
+                            Trust Your <br />
+                            <span className="text-white/40 italic">Body to Know What To Do.</span>
                         </motion.h1>
 
                         {/* Editorial Warmth / Prose */}
@@ -70,10 +70,7 @@ export default function LandingPage() {
                             variants={itemVariants}
                             className="font-editorial text-xl md:text-2xl text-albedo/70 max-w-2xl leading-relaxed mb-12"
                         >
-                            A laboratory for human-centric movement,
-                            redefining the crucible of physical interaction.
-                            Replacing rote drills with ecological dynamics,
-                            profound calmness, and total haptic awareness.
+                            Four weeks of learning how your body actually wants to move, through games, not drills. There is no sparring, no pressure, and zero expectation that you have ever done this before. Just a room, a partner, and a series of puzzles you solve together.
                         </motion.p>
 
                         {/* Action Nodes */}
@@ -82,14 +79,14 @@ export default function LandingPage() {
                                 href="https://instagram.com/umbramovement"
                                 className="haptic-node font-clinical uppercase tracking-widest text-sm px-10 py-5 flex items-center justify-center gap-3 text-albedo group border border-white/10 hover:border-visceral-crimson transition-all duration-500"
                             >
-                                Initiate Assessment
+                                Start Your 4-Week Journey
                                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 text-visceral-crimson" />
                             </Link>
                             <Link
                                 href="/lexicon"
                                 className="liquid-glass font-clinical uppercase tracking-widest text-sm px-10 py-5 flex items-center justify-center text-albedo/60 hover:text-albedo hover:bg-white/10 transition-all border border-white/5"
                             >
-                                Read The Lexicon
+                                How It Works
                             </Link>
                         </motion.div>
                     </motion.div>

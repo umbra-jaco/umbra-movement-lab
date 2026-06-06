@@ -24,13 +24,13 @@ export default function BookSession() {
             <div className="w-full max-w-4xl space-y-12 mb-12">
                 <div className="text-center space-y-6">
                     <Link href="/" className="text-sm font-mono text-zinc-500 hover:text-white transition-colors">
-                        ← RETURN TO SURFACE
+                        ← Back to Home
                     </Link>
                     <h1 className="text-4xl md:text-6xl font-black tracking-tighter uppercase text-white drop-shadow-md">
                         Enter the Crucible
                     </h1>
                     <p className="text-lg text-zinc-400 font-mono uppercase tracking-widest">
-                        Secure your slot. No walk-ins.
+                        Reserve your spot for the 4-Week Crucible. Space is limited.
                     </p>
                     <div className="w-16 h-1 bg-red-900 mx-auto mt-6 opacity-80"></div>
                 </div>

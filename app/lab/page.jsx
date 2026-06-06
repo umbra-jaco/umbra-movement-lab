@@ -8,17 +8,20 @@ const labSpecs = [
     {
         icon: <SunMedium className="w-5 h-5 text-visceral-crimson" />,
         title: "Photometric Occlusion",
-        detail: "Single-source overhead lighting. High-contrast spill. We eliminate peripheral visual noise to force reliance on haptic feedback."
+        detail: "Single-source overhead lighting. High-contrast spill. We eliminate peripheral visual noise to force reliance on haptic feedback.",
+        human: "When you can't rely on your eyes, your body learns to listen."
     },
     {
         icon: <MonitorOff className="w-5 h-5 text-visceral-crimson" />,
         title: "Zero-Mirror Policy",
-        detail: "The elimination of the 'optic loop.' By removing self-observation, we force the practitioner to feel the movement from the internal column."
+        detail: "The elimination of the 'optic loop.' By removing self-observation, we force the practitioner to feel the movement from the internal column.",
+        human: "Watching yourself slows you down. Feeling yourself speeds you up."
     },
     {
         icon: <Maximize className="w-5 h-5 text-visceral-crimson" />,
         title: "Brutalist Geometry",
-        detail: "Raw concrete surfaces and open negative space. An environment designed to minimize psychological interference."
+        detail: "Raw concrete surfaces and open negative space. An environment designed to minimize psychological interference.",
+        human: "A quiet room helps a quiet mind. No distractions, just movement."
     }
 ];
 
@@ -51,9 +54,7 @@ export default function LabNode() {
                     </h1>
 
                     <p className="font-editorial text-xl md:text-2xl text-white/50 max-w-3xl leading-relaxed">
-                        A laboratory designed for the <span className="text-albedo">Inner Crucible</span>.
-                        We have stripped away the vanity of traditional spaces to create a
-                        controlled environment where adaptation is the only option.
+                        A room. Concrete floors. One light. No mirrors, no screens, no distractions. Just you and another person, solving movement puzzles in real time. We designed it this way because the less there is to look at, the more you can <span className="text-albedo">feel</span>.
                     </p>
                 </header>
 
@@ -92,6 +93,9 @@ export default function LabNode() {
                                 <p className="font-sans text-sm text-white/40 leading-relaxed max-w-sm">
                                     {spec.detail}
                                 </p>
+                                <p className="font-sans text-xs text-white/60 leading-relaxed max-w-sm mt-2 italic">
+                                    {spec.human}
+                                </p>
                             </motion.div>
                         ))}
                     </div>
@@ -118,7 +122,7 @@ export default function LabNode() {
                         >
                             <div className="space-y-1">
                                 <span className="font-clinical text-xs tracking-[0.3em] uppercase text-visceral-crimson block font-bold">Initiate</span>
-                                <span className="font-arcane text-xl tracking-widest uppercase text-albedo">Request Access</span>
+                                <span className="font-arcane text-xl tracking-widest uppercase text-albedo">Book a Visit</span>
                             </div>
                             <ArrowRight className="w-6 h-6 text-white/20 group-hover:text-visceral-crimson group-hover:translate-x-2 transition-all" />
                         </Link>

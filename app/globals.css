@@ -1,18 +1,24 @@
 @import "tailwindcss";
 
-/* UMBRA DESIGN SYSTEM - TAILWIND V4
-  Injecting the Chiaroscuro palette and Dual-Typeface logic
-*/
+/* UMBRA DESIGN SYSTEM v2 - Brand Guide Colors */
 @theme {
+  /* Primary */
   --color-void: #050505;
   --color-void-black: #000000;
-  --color-albedo: #F5F5F0;
-  --color-albedo-cream: #EAEAE5;
-  --color-umbra-navy: #01153D;
-  --color-umbra-blue: #0047AB;
-  --color-visceral-crimson: #8A0303;
-  --color-visceral-blood: #5E0202;
+  --color-royal-white: #F4F1EA;
+  --color-albedo: #F4F1EA;
+  --color-visceral-crimson: #B1121B;
+  --color-concrete: #7C7770;
+  --color-shadow: #151515;
+
+  /* Secondary */
+  --color-bone: #D8D2C8;
+  --color-oxide: #3A0D11;
+  --color-ash: #A8A199;
+  --color-visceral-blood: #8A0A0F;
   --color-phosphor-green: #39FF14;
+  --color-absolute-black: #000000;
+  --color-absolute-white: #FFFFFF;
 
   /* The Free Google Font Stack */
   --font-arcane: var(--font-cinzel), serif;
@@ -34,7 +40,7 @@
 @layer base {
   :root {
     --background: #050505;
-    --foreground: #F5F5F0;
+    --foreground: #F4F1EA;
     --border: #1A1A1A;
   }
 

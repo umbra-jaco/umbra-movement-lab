@@ -21,23 +21,26 @@ export default function Footer() {
                             <span className="font-arcane text-2xl tracking-widest text-albedo">UMBRA</span>
                         </div>
                         <p className="font-sans text-sm text-white/40 max-w-sm leading-relaxed">
-                            Haptic dominance over optic reliance. A laboratory for human-centric movement, redefining the crucible of physical interaction.
+                            A pop-up movement lab in Roseville, CA. We explore martial movement through games and constraints instead of drills and memorization.
                         </p>
                     </div>
 
                     <div>
-                        <h4 className="font-clinical text-xs tracking-[0.2em] uppercase text-white/60 mb-6">The Manifold</h4>
+                        <h4 className="font-clinical text-xs tracking-[0.2em] uppercase text-white/60 mb-6">The Lab</h4>
                         <ul className="space-y-4 font-clinical text-sm tracking-widest uppercase text-white/30">
                             <li><Link href="/philosophy" className="hover:text-albedo transition-colors">Philosophy</Link></li>
+                            <li><Link href="/curriculum" className="hover:text-albedo transition-colors">Curriculum</Link></li>
+                            <li><Link href="/lab" className="hover:text-albedo transition-colors">The Space</Link></li>
+                            <li><Link href="/lexicon" className="hover:text-albedo transition-colors">Lexicon</Link></li>
                         </ul>
                     </div>
 
                     <div>
-                        <h4 className="font-clinical text-xs tracking-[0.2em] uppercase text-white/60 mb-6">Coordinates</h4>
+                        <h4 className="font-clinical text-xs tracking-[0.2em] uppercase text-white/60 mb-6">Connect</h4>
                         <ul className="space-y-4 font-clinical text-sm tracking-widest uppercase text-white/30">
-                            <li><a href="https://instagram.com/umbramovement" className="hover:text-albedo transition-colors">Instagram</a></li>
-
-                            <li><span className="text-visceral-crimson">Unlisted Location</span></li>
+                            <li><Link href="/book" className="hover:text-albedo transition-colors">Book Now</Link></li>
+                            <li><a href="https://instagram.com/umbramovementlab" className="hover:text-albedo transition-colors">Instagram</a></li>
+                            <li><a href="mailto:info@umbramovementlab.com" className="hover:text-albedo transition-colors">Email</a></li>
                         </ul>
                     </div>
                 </div>

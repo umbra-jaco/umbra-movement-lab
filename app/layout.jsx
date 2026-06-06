@@ -12,9 +12,26 @@ const syne = Syne({ subsets: ["latin"], variable: "--font-syne" });
 const cinzel = Cinzel_Decorative({ weight: ["400", "700", "900"], subsets: ["latin"], variable: "--font-cinzel" });
 
 export const metadata = {
-    title: "UMBRA | Movement Labs",
-    description: "Haptic dominance over optic reliance. The Inner Crucible.",
-};
+    title: "UMBRA Movement Lab | Human-Centric Movement",
+    description: "A pop-up movement lab in Roseville, CA. Four weeks of learning how your body actually wants to move, through games not drills. No experience needed.",
+    openGraph: {
+        title: "UMBRA Movement Lab",
+        description: "A pop-up movement lab in Roseville, CA. Four weeks of learning how your body actually wants to move, through games not drills.",
+        url: "https://umbramovementlab.com",
+        siteName: "UMBRA Movement Lab",
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "UMBRA Movement Lab",
+        description: "A pop-up movement lab in Roseville, CA. Four weeks of learning how your body actually wants to move, through games not drills.",
+    },
+    robots: {
+        index: true,
+        follow: true,
+    },
+}
 
 export default function RootLayout({ children }) {
     return (

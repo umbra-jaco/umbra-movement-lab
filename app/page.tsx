@@ -31,6 +31,10 @@ export default function FourWeekProgram() {
                         A Human-Centric Movement Lab
                     </p>
 
+                    <p className="text-sm md:text-base text-zinc-500 font-light mt-4">
+                        No experience needed. Just curiosity.
+                    </p>
+
                     <div className="w-24 h-1 bg-red-900 mx-auto mt-8 opacity-80"></div>
                 </div>
             </section>
@@ -76,7 +80,7 @@ export default function FourWeekProgram() {
                             href="/book"
                             className="inline-block w-full text-center bg-zinc-100 text-black font-bold uppercase tracking-widest py-4 hover:bg-zinc-300 transition-colors duration-200"
                         >
-                            Secure Your Spot
+                            Book Your Spot
                         </Link>
                         {/* PRIMARY: Instagram DM */}
                         <Link
@@ -84,14 +88,14 @@ export default function FourWeekProgram() {
                             target="_blank"
                             className="inline-block w-full text-center bg-zinc-100 text-black font-bold uppercase tracking-widest py-4 hover:bg-zinc-300 transition-colors duration-200"
                         >
-                            Follow Us
+                            Follow @umbramovement
                         </Link>
                         {/* SECONDARY: Direct Email */}
                         <Link
                             href="mailto:info@umbramovementlab.com?subject=UMBRA%204-Week%20Crucible%20Inquiry"
                             className="inline-block w-full text-center bg-zinc-100 text-black font-bold uppercase tracking-widest py-4 hover:bg-zinc-300 transition-colors duration-200"
                         >
-                            Email Us
+                            Ask a Question
                         </Link>
                     </div>
                 </div>

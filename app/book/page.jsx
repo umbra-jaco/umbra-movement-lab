@@ -39,7 +39,7 @@ export default function BookSession() {
             {/* THE SCHEDULING BLOCK */}
             <div className="w-full max-w-4xl border border-zinc-800 bg-[#0a0a0a] shadow-2xl overflow-hidden">
                 <Cal
-                    calLink="umbra-1/umbra-intro" // YOU MUST UPDATE THIS
+                    calLink="umbra-1/umbra-intro"
                     style={{ width: "100%", height: "100%", overflow: "scroll" }}
                     config={{ theme: "dark" }}
                 />

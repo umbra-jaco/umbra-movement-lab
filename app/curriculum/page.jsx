@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Fingerprint, Activity, Layers, Flame, ArrowRight } from "lucide-react";
+import Link from 'next/link';
 
 const curriculumData = [
     {
@@ -125,6 +126,19 @@ export default function CurriculumPage() {
                             δ ∫ L(q, q̇, t) dt = 0
                         </div>
                     </div>
+                </section>
+
+                {/* Book Now CTA */}
+                <section className="mt-32 flex flex-col items-center text-center">
+                    <h2 className="font-kinetic text-3xl uppercase tracking-tighter text-albedo mb-4">
+                        Ready to Try It?
+                    </h2>
+                    <p className="font-sans text-white/40 text-sm max-w-md mb-8">
+                        Four Saturdays. No experience needed. Just show up and move.
+                    </p>
+                    <Link href="/book" className="px-8 py-4 bg-albedo text-void font-clinical text-sm uppercase tracking-[0.2em] font-bold hover:bg-visceral-crimson hover:text-albedo transition-colors duration-300">
+                        Book Your Spot
+                    </Link>
                 </section>
             </div>
         </div>

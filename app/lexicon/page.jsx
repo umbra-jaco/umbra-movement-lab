@@ -276,6 +276,22 @@ export default function LexiconNode() {
                             </motion.div>
                         ))}
 
+                        {/* Book Now CTA */}
+                        <div className="pt-12 flex flex-col items-center gap-6 border-t border-white/5">
+                            <h2 className="font-kinetic text-2xl uppercase tracking-tighter text-albedo">
+                                Ready to Move?
+                            </h2>
+                            <p className="font-sans text-sm text-white/40 max-w-sm text-center">
+                                All the theory in the world means nothing until you step onto the mat. Come see what it feels like.
+                            </p>
+                            <Link
+                                href="/book"
+                                className="px-8 py-4 bg-albedo text-void font-clinical text-sm uppercase tracking-[0.2em] font-bold hover:bg-visceral-crimson hover:text-albedo transition-colors duration-300"
+                            >
+                                Book Your Spot
+                            </Link>
+                        </div>
+
                         {/* Return Node */}
                         <div className="pt-24 flex justify-center">
                             <Link

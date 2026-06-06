@@ -93,9 +93,9 @@ export default function PhilosophyNode() {
                 <p className="text-neutral-500 max-w-xl text-base md:text-lg mb-10">
                     No techniques to memorize. Just problem-solving with your body. A more human way to learn movement.
                 </p>
-                <button className="px-8 py-4 bg-white text-black text-sm uppercase tracking-[0.2em] font-bold hover:bg-[#8A0303] hover:text-white transition-colors duration-300">
+                <Link href="/book" className="px-8 py-4 bg-white text-black text-sm uppercase tracking-[0.2em] font-bold hover:bg-[#8A0303] hover:text-white transition-colors duration-300 inline-block">
                     Ready to Move?
-                </button>
+                </Link>
             </section>
 
         </div>

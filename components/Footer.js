@@ -13,9 +13,9 @@ export default function Footer() {
             <div className="container mx-auto px-6 relative">
 
 
-                {/* Middle Section: Directory Matrix */}
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 border-t border-white/5 pt-12 mb-16">
-                    <div className="md:col-span-2">
+                {/* Middle Section */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-white/5 pt-12 mb-16">
+                    <div>
                         <div className="flex items-center gap-3 mb-6">
                             <CircleDashed className="w-6 h-6 text-albedo animate-[spin_20s_linear_infinite]" />
                             <span className="font-arcane text-2xl tracking-widest text-albedo">UMBRA</span>
@@ -26,20 +26,10 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h4 className="font-clinical text-xs tracking-[0.2em] uppercase text-white/60 mb-6">The Lab</h4>
-                        <ul className="space-y-4 font-clinical text-sm tracking-widest uppercase text-white/30">
-                            <li><Link href="/philosophy" className="hover:text-albedo transition-colors">Philosophy</Link></li>
-                            <li><Link href="/curriculum" className="hover:text-albedo transition-colors">Curriculum</Link></li>
-                            <li><Link href="/lab" className="hover:text-albedo transition-colors">The Space</Link></li>
-                            <li><Link href="/about" className="hover:text-albedo transition-colors">About</Link></li>
-                            <li><Link href="/lexicon" className="hover:text-albedo transition-colors">Lexicon</Link></li>
-                        </ul>
-                    </div>
-
-                    <div>
                         <h4 className="font-clinical text-xs tracking-[0.2em] uppercase text-white/60 mb-6">Connect</h4>
                         <ul className="space-y-4 font-clinical text-sm tracking-widest uppercase text-white/30">
                             <li><Link href="/faq" className="hover:text-albedo transition-colors">FAQ</Link></li>
+                            <li><Link href="/about" className="hover:text-albedo transition-colors">About</Link></li>
                             <li><Link href="/book" className="hover:text-albedo transition-colors">Book Now</Link></li>
                             <li><a href="https://instagram.com/umbramovement" className="hover:text-albedo transition-colors">Instagram</a></li>
                             <li><a href="mailto:info@umbramovementlab.com" className="hover:text-albedo transition-colors">Email</a></li>

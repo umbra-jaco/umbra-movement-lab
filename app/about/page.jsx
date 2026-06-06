@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const metadata = {
     title: "About | UMBRA Movement Lab",
-    description: "UMBRA exists because most movement spaces are not built for the people who need them most. We are changing that.",
+    description: "Most movement spaces are built for people who are already tough. We are building one for everyone else.",
 };
 
 export default function AboutPage() {
@@ -30,7 +30,7 @@ export default function AboutPage() {
                     <section className="space-y-4">
                         <h2 className="font-kinetic text-2xl uppercase tracking-tighter text-albedo">The Problem</h2>
                         <p>
-                            Walk into most martial arts gyms and you will find the same walls. Ego. Aggression. Unspoken hierarchies. A culture that treats newcomers like intruders and women like afterthoughts. This is not a feature of combat sports. It is a failure of the spaces that teach them.
+                            Walk into most martial arts gyms and you will find the same walls. Ego. Aggression. Unspoken hierarchies. A culture that treats newcomers like intruders and women like afterthoughts. These spaces were never designed to welcome people. They were built for people who were already in the door.
                         </p>
                         <p>
                             The people who would benefit most from movement, from learning to trust their body under pressure, from the quiet confidence that comes with physical competence, are the same people these spaces push away. Beginners. Anxious people. People who have been hurt before. People who just want to move without being yelled at or sized up or made to feel small.
@@ -43,33 +43,33 @@ export default function AboutPage() {
                             UMBRA uses constraint-led games instead of traditional instruction. No memorizing techniques. No endless drilling. No one yelling at you to go harder. We set up movement puzzles with specific rules and boundaries, and your nervous system figures out the rest. Your body already knows how to move efficiently. It just needs the right environment to discover it.
                         </p>
                         <p>
-                            This method comes from a body of research called ecological dynamics. You can read about it on the Philosophy page if you want the science. The short version is this: learning happens through interaction, not imitation. We do not teach you how to move. We create conditions where better movement is the only option.
+                            This method comes from a body of research called ecological dynamics. The short version: learning happens through interaction with real resistance and real feedback. You adapt to the problem in front of you because your brain and body are wired to do exactly that when given the chance.
                         </p>
                         <p>
-                            The first time we tested this approach was with a dancer who had never grappled before. Within weeks she was solving movement problems that took years for traditionally trained martial artists to figure out. That result was not exceptional. It was the method working exactly as designed.
+                            The first time we tried this approach, we paired someone who had never grappled before with constraint-led games. Within weeks she was solving movement problems that traditionally trained martial artists took years to reach. That stuck with us.
                         </p>
                     </section>
 
                     <section className="space-y-4">
                         <h2 className="font-kinetic text-2xl uppercase tracking-tighter text-albedo">The Space</h2>
                         <p>
-                            Concrete floors. One light. No mirrors. No screens. Every design choice in the lab serves the same function: remove distraction so you can feel what your body is doing. When you cannot watch yourself, you learn to listen. That is where the real change happens.
+                            Concrete floors. One light. No mirrors. No screens. Every choice in the lab comes back to the same idea: remove distraction so you can feel what your body is doing. When you cannot watch yourself, you learn to listen.
                         </p>
                         <p>
-                            Right now the lab is a pop-up in Roseville, California. Eventually it will be a permanent brutalist temple somewhere in the woods near a community that wants what we offer. The physical form is still taking shape. The principles are already here.
+                            Right now the lab is a pop-up in Roseville, California. The long-term vision is a permanent brutalist temple in the woods near a community that wants it. The physical form is still taking shape. The principles are already here.
                         </p>
                     </section>
 
                     <section className="space-y-4">
                         <h2 className="font-kinetic text-2xl uppercase tracking-tighter text-albedo">The Person Behind It</h2>
                         <p>
-                            Jacobb started training martial arts at age three and never really stopped. He got his blue belt in Brazilian jiu jitsu from Cesar Gracie, trained with fighters who competed in Strikeforce, and spent years as a sparring partner for local fighters preparing for bouts. He also spent years away from the mats, building a career in music that took him through festivals, studios, and the exhaustion of selling yourself as a product.
+                            Jacobb started training martial arts at age three and never really stopped. He got his blue belt in Brazilian jiu jitsu from Cesar Gracie, trained alongside fighters who competed in Strikeforce, and spent years as a sparring partner helping local fighters prepare for their bouts. He also built a career in music that took him through festivals, studios, and the slow burnout of selling yourself as a product.
                         </p>
                         <p>
-                            When he came back to grappling, he found a coaching method that made more sense than anything he had seen before. The constraint-led approach, grounded in decades of research on how humans actually learn to move, reshaped his entire understanding. He started running games instead of teaching techniques. The people he trained learned faster, stayed calmer, and actually enjoyed the process.
+                            When he came back to grappling, he found a coaching method built on decades of research about how humans actually learn to move. The constraint-led approach reshaped how he saw everything. He started running games instead of teaching techniques. The people he trained learned faster, stayed calmer, and actually enjoyed the process.
                         </p>
                         <p>
-                            UMBRA is his attempt to build the space he could never find: a sanctuary where movement is a tool for self-discovery, not a proving ground for ego. A place where anyone, regardless of background or experience, can walk in and start learning.
+                            UMBRA is his attempt to build the space he always wished existed: a sanctuary where movement is a tool for self-discovery. A place where anyone can walk in and start learning, no background required.
                         </p>
                     </section>
 

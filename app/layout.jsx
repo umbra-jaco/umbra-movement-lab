@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
           ${fraunces.variable} 
           ${syne.variable} 
           ${cinzel.variable} 
-          bg-void text-albedo antialiased selection:bg-visceral-crimson selection:text-albedo
+          bg-void text-bone antialiased selection:bg-visceral-crimson selection:text-royal-white
         `}
         >
         {/* 1. The Atmospheric Noise Layer (Tactile Overlay) */}

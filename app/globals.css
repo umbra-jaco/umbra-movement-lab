@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* UMBRA DESIGN SYSTEM v2 - Brand Guide Colors */
+/* UMBRA DESIGN SYSTEM v3 - Lighter, Higher Contrast */
 @theme {
   /* Primary */
   --color-void: #050505;
@@ -20,6 +20,11 @@
   --color-absolute-black: #000000;
   --color-absolute-white: #FFFFFF;
 
+  /* Surface tones */
+  --color-surface: #1A1A1A;
+  --color-surface-mid: #222222;
+  --color-elevated: #2A2A2A;
+
   /* The Free Google Font Stack */
   --font-arcane: var(--font-cinzel), serif;
   --font-kinetic: var(--font-syne), sans-serif;
@@ -27,7 +32,6 @@
   --font-clinical: var(--font-space-grotesk), sans-serif;
   --font-sans: var(--font-inter), sans-serif;
 
-  /* Kinetic Fluidity Animations */
   --animate-kinetic-fade: kineticFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 
   @keyframes kineticFade {
@@ -41,34 +45,34 @@
   :root {
     --background: #050505;
     --foreground: #F4F1EA;
-    --border: #1A1A1A;
+    --border: #2A2A2A;
   }
 
   body {
     background-color: var(--color-void);
-    color: var(--color-albedo);
+    color: var(--color-bone);
     overflow-x: hidden;
   }
 
-  /* All headings default to the wide, brutalist Kinetic font */
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-kinetic);
     letter-spacing: -0.025em;
+    color: var(--color-albedo);
   }
 }
 
 /* Native CSS Component Utilities */
 @layer utilities {
   .liquid-glass {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(5, 5, 5, 0.6);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
   }
 
   .haptic-node {
-    background-color: #050505;
-    box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.05), inset -2px -2px 4px rgba(0, 0, 0, 0.5), 2px 2px 8px rgba(0,0,0,0.8);
+    background-color: #1A1A1A;
+    box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.03), inset -2px -2px 4px rgba(0, 0, 0, 0.5), 2px 2px 8px rgba(0,0,0,0.8);
     transition: all 0.3s ease;
   }
 
@@ -76,10 +80,34 @@
     box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.8), inset -2px -2px 4px rgba(255, 255, 255, 0.02);
   }
 
-  .perspective-1000 {
-    perspective: 1000px;
+  .perspective-1000 { perspective: 1000px; }
+  .transform-style-3d { transform-style: preserve-3d; }
+
+  /* Light section utilities */
+  .phosphor-border {
+    border-bottom: 1px solid rgba(57, 255, 20, 0.15);
   }
-  .transform-style-3d {
-    transform-style: preserve-3d;
+  .phosphor-border-left {
+    border-left: 2px solid rgba(57, 255, 20, 0.15);
+  }
+  .phosphor-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(57, 255, 20, 0.12), transparent);
+  }
+  .crimson-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(177, 18, 27, 0.2), transparent);
+  }
+  .section-card {
+    background-color: #1A1A1A;
+    border: 1px solid #2A2A2A;
+  }
+  .section-card:hover {
+    border-color: rgba(57, 255, 20, 0.1);
+  }
+  .section-alt {
+    background-color: #151515;
   }
 }

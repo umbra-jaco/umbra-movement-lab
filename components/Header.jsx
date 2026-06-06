@@ -43,6 +43,12 @@ export default function Header() {
                         PHILOSOPHY
                     </Link>
                     <Link
+                        href="/about"
+                        className="font-space-grotesk text-sm uppercase tracking-[0.2em] text-albedo/70 hover:text-visceral-crimson transition-colors duration-300"
+                    >
+                        ABOUT
+                    </Link>
+                    <Link
                         href="/lexicon"
                         className="font-space-grotesk text-sm uppercase tracking-[0.2em] text-albedo/70 hover:text-visceral-crimson transition-colors duration-300"
                     >

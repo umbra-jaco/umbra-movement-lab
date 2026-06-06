@@ -31,6 +31,7 @@ export default function Footer() {
                             <li><Link href="/philosophy" className="hover:text-albedo transition-colors">Philosophy</Link></li>
                             <li><Link href="/curriculum" className="hover:text-albedo transition-colors">Curriculum</Link></li>
                             <li><Link href="/lab" className="hover:text-albedo transition-colors">The Space</Link></li>
+                            <li><Link href="/about" className="hover:text-albedo transition-colors">About</Link></li>
                             <li><Link href="/lexicon" className="hover:text-albedo transition-colors">Lexicon</Link></li>
                         </ul>
                     </div>

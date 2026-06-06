@@ -42,6 +42,25 @@ export default function FourWeekProgram() {
             {/* THE TRANSLATED COPY */}
             <section className="max-w-3xl mx-auto px-6 py-24 space-y-16">
 
+                {/* WHAT TO EXPECT */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="space-y-3">
+                        <span className="text-red-900 font-mono text-xs tracking-[0.2em] uppercase">01</span>
+                        <h3 className="text-white font-bold uppercase">Show Up</h3>
+                        <p className="text-zinc-400 text-sm leading-relaxed">Wear comfortable clothes. Bring water. That is it. No gear, no experience, no fitness level required.</p>
+                    </div>
+                    <div className="space-y-3">
+                        <span className="text-red-900 font-mono text-xs tracking-[0.2em] uppercase">02</span>
+                        <h3 className="text-white font-bold uppercase">Play Games</h3>
+                        <p className="text-zinc-400 text-sm leading-relaxed">Every session is built around movement puzzles. You and a partner figure them out together. No one is watching, judging, or competing.</p>
+                    </div>
+                    <div className="space-y-3">
+                        <span className="text-red-900 font-mono text-xs tracking-[0.2em] uppercase">03</span>
+                        <h3 className="text-white font-bold uppercase">Feel the Shift</h3>
+                        <p className="text-zinc-400 text-sm leading-relaxed">By week four, you will move differently. Not because you memorized anything, but because your body figured it out on its own.</p>
+                    </div>
+                </div>
+
                 <div className="space-y-6 text-xl md:text-2xl leading-relaxed text-zinc-300 font-light">
                     <p>
                         <strong className="text-white font-bold">What is Umbra?</strong> Right now, it is a pop-up lab. Eventually, it will be a sanctuary for anyone looking to move better and live harder.
@@ -73,6 +92,10 @@ export default function FourWeekProgram() {
                             <span className="text-zinc-500 font-mono">03 //</span>
                             <span><strong className="text-white">LOCATION:</strong> Roseville, CA (Coordinates provided upon entry)</span>
                         </li>
+                        <li className="flex items-start gap-4">
+                            <span className="text-zinc-500 font-mono">04 //</span>
+                            <span><strong className="text-white">PRICE:</strong> $200 for the full 4-week program</span>
+                        </li>
                     </ul>
 
                     <div className="pt-8 border-t border-zinc-800 flex flex-col gap-4">
@@ -84,11 +107,11 @@ export default function FourWeekProgram() {
                         </Link>
                         {/* PRIMARY: Instagram DM */}
                         <Link
-                            href="https://instagram.com/umbramovement"
+                            href="https://instagram.com/umbramovementlab"
                             target="_blank"
                             className="inline-block w-full text-center bg-zinc-100 text-black font-bold uppercase tracking-widest py-4 hover:bg-zinc-300 transition-colors duration-200"
                         >
-                            Follow @umbramovement
+                            Follow @umbramovementlab
                         </Link>
                         {/* SECONDARY: Direct Email */}
                         <Link

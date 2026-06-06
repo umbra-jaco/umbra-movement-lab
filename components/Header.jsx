@@ -19,6 +19,12 @@ export default function Header() {
                 {/* Global Navigation - Clinical Precision */}
                 <nav className="flex gap-8 items-center">
                     <Link
+                        href="/faq"
+                        className="font-space-grotesk text-sm uppercase tracking-[0.2em] text-albedo/70 hover:text-visceral-crimson transition-colors duration-300"
+                    >
+                        FAQ
+                    </Link>
+                    <Link
                         href="/book"
                         className="px-4 py-2 border border-visceral-crimson text-sm uppercase tracking-[0.2em] text-albedo hover:bg-visceral-crimson transition-colors duration-300"
                     >

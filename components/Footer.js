@@ -38,6 +38,7 @@ export default function Footer() {
                     <div>
                         <h4 className="font-clinical text-xs tracking-[0.2em] uppercase text-white/60 mb-6">Connect</h4>
                         <ul className="space-y-4 font-clinical text-sm tracking-widest uppercase text-white/30">
+                            <li><Link href="/faq" className="hover:text-albedo transition-colors">FAQ</Link></li>
                             <li><Link href="/book" className="hover:text-albedo transition-colors">Book Now</Link></li>
                             <li><a href="https://instagram.com/umbramovementlab" className="hover:text-albedo transition-colors">Instagram</a></li>
                             <li><a href="mailto:info@umbramovementlab.com" className="hover:text-albedo transition-colors">Email</a></li>

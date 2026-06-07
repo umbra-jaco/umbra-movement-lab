@@ -23,7 +23,7 @@ export default function Sentinel() {
 
             {/* 2. THE CHIAROSCURO OVERLAY (Atmospheric Depth) */}
             {/* This creates the tight spotlight spill effect mentioned in the research. */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_#050505_85%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_var(--color-void)_85%)]" />
 
             {/* 3. 35MM FILM GRAIN (Tactile Friction) */}
             {/* Using the noise.svg to create that 'analog, ancient ritual' feel. */}

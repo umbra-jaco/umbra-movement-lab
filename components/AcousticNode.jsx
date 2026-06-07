@@ -96,7 +96,7 @@ export default function AcousticNode() {
                         </motion.div>
                     ) : (
                         <motion.div key="inactive" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-                            <VolumeX className="h-3 w-3 text-white/10 group-hover:text-white/40" />
+                            <VolumeX className="h-3 w-3 text-albedo/10 group-hover:text-albedo/40" />
                         </motion.div>
                     )}
                 </AnimatePresence>
@@ -104,11 +104,11 @@ export default function AcousticNode() {
 
             <div className="flex flex-col">
         <span className={`font-clinical text-[7px] tracking-[0.5em] uppercase transition-colors duration-1000 ${
-            isActive ? "text-visceral-crimson/60" : "text-white/10"
+            isActive ? "text-visceral-crimson/60" : "text-albedo/10"
         }`}>
           {isActive ? "System_Acoustics_Nominal" : "Acoustic_Node_Offline"}
         </span>
-                <span className="font-clinical text-[9px] tracking-widest text-white/20 uppercase">
+                <span className="font-clinical text-[9px] tracking-widest text-albedo/20 uppercase">
           Atmospheric Wash // 528Hz Peak
         </span>
             </div>

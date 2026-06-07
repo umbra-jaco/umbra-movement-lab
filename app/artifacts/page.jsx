@@ -61,7 +61,7 @@ export default function ArtifactsNode() {
                         <h1 className="font-kinetic text-6xl md:text-8xl uppercase tracking-tighter leading-none mb-6">
                             Ascendant <br /> Artifacts.
                         </h1>
-                        <p className="font-editorial text-xl text-white/50 leading-relaxed">
+                        <p className="font-editorial text-xl text-albedo/50 leading-relaxed">
                             Physical extensions of the UMBRA philosophy. Engineered for performance,
                             designed for invisibility. Each artifact is a limited production run.
                         </p>
@@ -70,7 +70,7 @@ export default function ArtifactsNode() {
                     <div className="flex gap-4">
                         <div className="flex items-center gap-2 px-4 py-2 border border-white/5 bg-white/5">
                             <div className="w-2 h-2 rounded-full bg-phosphor-green animate-pulse" />
-                            <span className="font-clinical text-[10px] tracking-widest uppercase text-white/60">Live Drop</span>
+                            <span className="font-clinical text-[10px] tracking-widest uppercase text-albedo/60">Live Drop</span>
                         </div>
                     </div>
                 </header>
@@ -92,14 +92,14 @@ export default function ArtifactsNode() {
                             <div className="w-full md:w-1/2 aspect-square bg-neutral-900 border border-white/5 overflow-hidden relative">
                                 {item.status === 'archived' && (
                                     <div className="absolute inset-0 z-20 flex items-center justify-center bg-void/60">
-                                        <span className="font-clinical text-xs tracking-[0.5em] uppercase text-white/80 border border-white/20 px-4 py-2">
+                                        <span className="font-clinical text-xs tracking-[0.5em] uppercase text-albedo/80 border border-white/20 px-4 py-2">
                                             Archived
                                         </span>
                                     </div>
                                 )}
                                 {/* Hotswap images/videos here. Using a placeholder div. */}
                                 <div className="absolute inset-0 bg-neutral-800 animate-pulse group-hover:scale-105 transition-transform duration-1000" />
-                                <div className="absolute top-4 left-4 font-clinical text-[10px] text-white/40 tracking-widest uppercase">
+                                <div className="absolute top-4 left-4 font-clinical text-[10px] text-albedo/40 tracking-widest uppercase">
                                     Ref: {item.id}
                                 </div>
                             </div>
@@ -113,7 +113,7 @@ export default function ArtifactsNode() {
                                     <h3 className="font-arcane text-2xl tracking-widest text-albedo mb-4 uppercase">
                                         {item.name}
                                     </h3>
-                                    <p className="font-sans text-xs text-white/40 leading-relaxed mb-6">
+                                    <p className="font-sans text-xs text-albedo/40 leading-relaxed mb-6">
                                         {item.description}
                                     </p>
 
@@ -121,7 +121,7 @@ export default function ArtifactsNode() {
                                         {item.specs.map((spec, i) => (
                                             <li key={i} className="flex items-center gap-2">
                                                 <div className="w-1 h-1 bg-white/20 rounded-full" />
-                                                <span className="font-clinical text-[9px] uppercase tracking-widest text-white/30">{spec}</span>
+                                                <span className="font-clinical text-[9px] uppercase tracking-widest text-albedo/30">{spec}</span>
                                             </li>
                                         ))}
                                     </ul>
@@ -130,7 +130,7 @@ export default function ArtifactsNode() {
                                 <div className="flex items-center justify-between mt-auto pt-6 border-t border-white/5">
                                     <span className="font-clinical text-lg text-albedo">{item.price}</span>
                                     <button className="flex items-center gap-3 group/btn">
-                                        <span className="font-clinical text-[10px] tracking-[0.3em] uppercase text-white/50 group-hover/btn:text-albedo transition-colors">
+                                        <span className="font-clinical text-[10px] tracking-[0.3em] uppercase text-albedo/50 group-hover/btn:text-albedo transition-colors">
                                             Secure Item
                                         </span>
                                         <ArrowRight className="w-4 h-4 text-visceral-crimson group-hover/btn:translate-x-1 transition-transform" />
@@ -146,21 +146,21 @@ export default function ArtifactsNode() {
                     <div className="space-y-4">
                         <Box className="w-5 h-5 text-visceral-crimson" />
                         <h4 className="font-clinical text-xs tracking-widest uppercase text-albedo">Logistics</h4>
-                        <p className="font-sans text-[11px] text-white/30 leading-relaxed uppercase">
+                        <p className="font-sans text-[11px] text-albedo/30 leading-relaxed uppercase">
                             Global secure shipping available. All artifacts are tracked via encrypted manifest numbers.
                         </p>
                     </div>
                     <div className="space-y-4">
                         <ShieldCheck className="w-5 h-5 text-visceral-crimson" />
                         <h4 className="font-clinical text-xs tracking-widest uppercase text-albedo">Durability</h4>
-                        <p className="font-sans text-[11px] text-white/30 leading-relaxed uppercase">
+                        <p className="font-sans text-[11px] text-albedo/30 leading-relaxed uppercase">
                             Pressure-tested in the lab. Every seam is reinforced for high-friction interaction and structural longevity.
                         </p>
                     </div>
                     <div className="space-y-4">
                         <Zap className="w-5 h-5 text-visceral-crimson" />
                         <h4 className="font-clinical text-xs tracking-widest uppercase text-albedo">Drop Protocol</h4>
-                        <p className="font-sans text-[11px] text-white/30 leading-relaxed uppercase">
+                        <p className="font-sans text-[11px] text-albedo/30 leading-relaxed uppercase">
                             No restocks. Once an artifact enters the archive, the technical blueprints are retired.
                         </p>
                     </div>

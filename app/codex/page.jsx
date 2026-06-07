@@ -111,7 +111,7 @@ export default function MasterCodex() {
                             <div className="p-2 bg-visceral-crimson/10 border border-visceral-crimson/30">
                                 <Terminal className="w-5 h-5 text-visceral-crimson" />
                             </div>
-                            <span className="text-xs tracking-[0.5em] uppercase text-white/40 font-bold">
+                            <span className="text-xs tracking-[0.5em] uppercase text-albedo/40 font-bold">
                                 Master Codex // INTERNAL MANIFEST
                             </span>
                         </div>
@@ -126,7 +126,7 @@ export default function MasterCodex() {
                                 STATUS: {manifestData.systemStatus}
                             </span>
                         </div>
-                        <span className="text-[10px] tracking-widest uppercase text-white/20 block font-mono">
+                        <span className="text-[10px] tracking-widest uppercase text-albedo/20 block font-mono">
                             SYNC: {manifestData.lastSync} // {manifestData.coordinates}
                         </span>
                     </div>
@@ -144,8 +144,8 @@ export default function MasterCodex() {
                             <div className="space-y-5">
                                 {manifestData.infrastructure.map((item, idx) => (
                                     <div key={idx} className="group">
-                                        <span className="text-[9px] uppercase text-white/30 tracking-[0.2em] block mb-1">{item.label}</span>
-                                        <span className="text-xs uppercase text-white/80 tracking-widest group-hover:text-visceral-crimson transition-colors">{item.value}</span>
+                                        <span className="text-[9px] uppercase text-albedo/30 tracking-[0.2em] block mb-1">{item.label}</span>
+                                        <span className="text-xs uppercase text-albedo/80 tracking-widest group-hover:text-visceral-crimson transition-colors">{item.value}</span>
                                     </div>
                                 ))}
                             </div>
@@ -154,9 +154,9 @@ export default function MasterCodex() {
                         <div className="p-8 bg-white/[0.02] border border-white/5 space-y-6">
                             <div className="flex items-center gap-3">
                                 <Lock className="w-4 h-4 text-visceral-crimson" />
-                                <h3 className="text-[10px] uppercase tracking-[0.3em] text-white/60 font-bold">Security Protcol</h3>
+                                <h3 className="text-[10px] uppercase tracking-[0.3em] text-albedo/60 font-bold">Security Protcol</h3>
                             </div>
-                            <p className="text-[10px] text-white/30 leading-relaxed uppercase tracking-widest">
+                            <p className="text-[10px] text-albedo/30 leading-relaxed uppercase tracking-widest">
                                 WAF active. SQL injection prevention enforced for D1 nodes.
                                 Zero-Trust architecture secured via Clerk for admin entry.
                             </p>
@@ -202,7 +202,7 @@ export default function MasterCodex() {
                                         </div>
                                         <div className={`inline-block text-[8px] uppercase tracking-[0.4em] px-3 py-1 border ${
                                             phase.status === 'complete' ? 'border-visceral-crimson/40 text-visceral-crimson bg-visceral-crimson/5' :
-                                                phase.status === 'active' ? 'border-phosphor-green/40 text-phosphor-green bg-phosphor-green/5' : 'border-white/10 text-white/20'
+                                                phase.status === 'active' ? 'border-phosphor-green/40 text-phosphor-green bg-phosphor-green/5' : 'border-white/10 text-albedo/20'
                                         }`}>
                                             {phase.status}
                                         </div>
@@ -211,8 +211,8 @@ export default function MasterCodex() {
                                     <ul className="space-y-6">
                                         {phase.milestones.map((milestone, mIdx) => (
                                             <li key={mIdx} className="flex items-start gap-4 group">
-                                                <ChevronRight className={`w-3 h-3 mt-1.5 transition-transform group-hover:translate-x-1 ${phase.status === 'complete' ? 'text-visceral-crimson' : 'text-white/10'}`} />
-                                                <span className={`text-xs tracking-widest uppercase leading-relaxed ${phase.status === 'complete' ? 'text-white/30 line-through' : 'text-white/60'}`}>
+                                                <ChevronRight className={`w-3 h-3 mt-1.5 transition-transform group-hover:translate-x-1 ${phase.status === 'complete' ? 'text-visceral-crimson' : 'text-albedo/10'}`} />
+                                                <span className={`text-xs tracking-widest uppercase leading-relaxed ${phase.status === 'complete' ? 'text-albedo/30 line-through' : 'text-albedo/60'}`}>
                                                     {milestone}
                                                 </span>
                                             </li>
@@ -228,17 +228,17 @@ export default function MasterCodex() {
                 <footer className="mt-48 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-12">
                     <div className="flex items-center gap-8 group">
                         <div className="p-5 border border-white/10 group-hover:border-visceral-crimson transition-all duration-700 relative overflow-hidden">
-                            <Zap className="w-6 h-6 text-white/40 group-hover:text-visceral-crimson relative z-10" />
+                            <Zap className="w-6 h-6 text-albedo/40 group-hover:text-visceral-crimson relative z-10" />
                             <div className="absolute inset-0 bg-visceral-crimson/5 translate-y-full group-hover:translate-y-0 transition-transform duration-700" />
                         </div>
                         <div>
-                            <span className="text-[10px] uppercase text-white/20 tracking-[0.5em] block mb-1 font-bold">Active Directive</span>
+                            <span className="text-[10px] uppercase text-albedo/20 tracking-[0.5em] block mb-1 font-bold">Active Directive</span>
                             <span className="text-sm uppercase tracking-[0.2em] text-albedo group-hover:text-visceral-crimson transition-colors font-bold">
                                 Phase 02 // Calibrate Sensory Node
                             </span>
                         </div>
                     </div>
-                    <div className="text-[9px] text-white/20 uppercase tracking-[0.3em] leading-loose text-center md:text-right font-mono">
+                    <div className="text-[9px] text-albedo/20 uppercase tracking-[0.3em] leading-loose text-center md:text-right font-mono">
                         Confidential system asset // UMBRA Movement Laboratory <br />
                         Unauthorized distribution strictly prohibited // Code 334-ALPHA
                     </div>

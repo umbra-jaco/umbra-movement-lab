@@ -25,18 +25,67 @@
   --color-surface-mid: #222222;
   --color-elevated: #2A2A2A;
 
-  /* The Free Google Font Stack */
-  --font-arcane: var(--font-cinzel), serif;
+  /* Semantic color aliases (backward-compatible — old names still work) */
+  --color-text-primary: var(--color-royal-white);
+  --color-text-secondary: var(--color-bone);
+  --color-text-muted: var(--color-concrete);
+  --color-text-subtle: var(--color-ash);
+  --color-bg-base: var(--color-void);
+  --color-bg-raised: var(--color-surface);
+  --color-bg-raised-hover: var(--color-surface-mid);
+  --color-border-base: var(--color-elevated);
+  --color-accent: var(--color-visceral-crimson);
+  --color-accent-glow: var(--color-phosphor-green);
+
+  /* Shadow / elevation scale */
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.4), 0 1px 2px rgba(0,0,0,0.3);
+  --shadow-dropdown: 0 10px 25px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05);
+  --shadow-modal: 0 25px 50px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.08);
+  --shadow-glow-sm: 0 0 12px rgba(57,255,20,0.15);
+  --shadow-glow-md: 0 0 24px rgba(57,255,20,0.2);
+
+  /* Motion durations */
+  --duration-fast: 150ms;
+  --duration-base: 200ms;
+  --duration-slow: 350ms;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Font stack — consolidated to 2 families with backward-compatible aliases */
+  --font-display: var(--font-syne), sans-serif;
+  --font-ui: var(--font-space-grotesk), sans-serif;
+  /* Legacy aliases — all resolve to display or UI */
+  --font-arcane: var(--font-syne), sans-serif;
   --font-kinetic: var(--font-syne), sans-serif;
-  --font-editorial: var(--font-fraunces), serif;
+  --font-editorial: var(--font-syne), sans-serif;
   --font-clinical: var(--font-space-grotesk), sans-serif;
-  --font-sans: var(--font-inter), sans-serif;
+  --font-sans: var(--font-space-grotesk), sans-serif;
 
   --animate-kinetic-fade: kineticFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in: fadeIn 0.25s ease-out forwards;
+  --animate-slide-up: slideUp 0.25s var(--ease-out-expo) forwards;
+  --animate-scale-in: scaleIn 0.2s var(--ease-out-expo) forwards;
+  --animate-pulse-glow: pulseGlow 2s ease-in-out infinite;
 
   @keyframes kineticFade {
     0% { opacity: 0; transform: translateY(10px); }
     100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes slideUp {
+    0% { opacity: 0; transform: translateY(8px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes scaleIn {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  @keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 8px rgba(57,255,20,0.1); }
+    50% { box-shadow: 0 0 20px rgba(57,255,20,0.25); }
   }
 }
 
@@ -46,6 +95,32 @@
     --background: #050505;
     --foreground: #F4F1EA;
     --border: #2A2A2A;
+  }
+
+  /* LIGHT MODE — remaps all neutral/surface variables while keeping accents fixed */
+  :root:not(.dark) {
+    --color-void: #FAFAF7;
+    --color-void-black: #FFFFFF;
+    --color-royal-white: #12110F;
+    --color-albedo: #12110F;
+    --color-bone: #3D3830;
+    --color-concrete: #6B6560;
+    --color-ash: #7A746E;
+    --color-shadow: #EBE7E0;
+    --color-surface: #F3F1EC;
+    --color-surface-mid: #EDEAE5;
+    --color-elevated: #E2DDD5;
+    --color-oxide: #F5E5E7;
+    --color-absolute-black: #12110F;
+    --color-absolute-white: #FAFAF7;
+    --background: #FAFAF7;
+    --foreground: #12110F;
+    --border: #E2DDD5;
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+    --shadow-dropdown: 0 10px 25px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.06);
+    --shadow-modal: 0 25px 50px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.08);
+    --shadow-glow-sm: 0 0 12px rgba(57,255,20,0.08);
+    --shadow-glow-md: 0 0 24px rgba(57,255,20,0.12);
   }
 
   body {
@@ -64,14 +139,14 @@
 /* Native CSS Component Utilities */
 @layer utilities {
   .liquid-glass {
-    background-color: rgba(5, 5, 5, 0.6);
+    background-color: color-mix(in srgb, var(--color-void) 60%, transparent);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border: 1px solid color-mix(in srgb, var(--color-elevated) 60%, transparent);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
   }
 
   .haptic-node {
-    background-color: #1A1A1A;
+    background-color: var(--color-surface);
     box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.03), inset -2px -2px 4px rgba(0, 0, 0, 0.5), 2px 2px 8px rgba(0,0,0,0.8);
     transition: all 0.3s ease;
   }
@@ -79,9 +154,6 @@
   .haptic-node:active {
     box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.8), inset -2px -2px 4px rgba(255, 255, 255, 0.02);
   }
-
-  .perspective-1000 { perspective: 1000px; }
-  .transform-style-3d { transform-style: preserve-3d; }
 
   /* Light section utilities */
   .phosphor-border {
@@ -101,13 +173,34 @@
     background: linear-gradient(90deg, transparent, rgba(177, 18, 27, 0.2), transparent);
   }
   .section-card {
-    background-color: #1A1A1A;
-    border: 1px solid #2A2A2A;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-elevated);
   }
   .section-card:hover {
     border-color: rgba(57, 255, 20, 0.1);
   }
   .section-alt {
-    background-color: #151515;
+    background-color: var(--color-shadow);
+  }
+
+  /* Hover micro-interactions */
+  .btn-hover {
+    transition: transform var(--duration-fast) var(--ease-out-expo),
+                box-shadow var(--duration-fast) var(--ease-out-expo);
+  }
+  .btn-hover:hover {
+    transform: scale(1.02);
+  }
+  .btn-hover:active {
+    transform: scale(0.98);
+    transition-duration: 75ms;
+  }
+  .card-lift {
+    transition: transform var(--duration-base) var(--ease-out-expo),
+                box-shadow var(--duration-base) var(--ease-out-expo);
+  }
+  .card-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
   }
 }

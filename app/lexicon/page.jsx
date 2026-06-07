@@ -198,14 +198,14 @@ export default function LexiconNode() {
                 <header className="mb-20">
                     <div className="flex items-center gap-3 mb-6">
                         <Hash className="w-4 h-4 text-visceral-crimson" />
-                        <span className="font-clinical text-xs tracking-[0.4em] uppercase text-white/40">
+                        <span className="font-clinical text-xs tracking-[0.4em] uppercase text-albedo/40">
                             UMBRA Master Reference // Vol 01.01
                         </span>
                     </div>
                     <h1 className="font-kinetic text-6xl md:text-8xl uppercase tracking-tighter mb-8 leading-none">
                         The <span className="text-visceral-crimson">Lexicon.</span>
                     </h1>
-                    <p className="font-editorial text-xl text-white/50 leading-relaxed max-w-2xl">
+                    <p className="font-editorial text-xl text-albedo/50 leading-relaxed max-w-2xl">
                         Movement science has its own language. These are the terms you will hear in the lab, and what they actually mean for your body.
                     </p>
                 </header>
@@ -216,13 +216,13 @@ export default function LexiconNode() {
                     <aside className="lg:w-1/4">
                         <div className="sticky top-32 space-y-8">
                             <div className="border-l border-white/10 pl-6 space-y-4">
-                                <h4 className="font-clinical text-[10px] tracking-[0.3em] uppercase text-white/30 mb-6">Sectors</h4>
+                                <h4 className="font-clinical text-[10px] tracking-[0.3em] uppercase text-albedo/30 mb-6">Sectors</h4>
                                 {categories.map((cat) => (
                                     <button
                                         key={cat}
                                         onClick={() => setActiveCategory(cat)}
                                         className={`block font-clinical text-xs uppercase tracking-widest transition-all duration-300 ${
-                                            activeCategory === cat ? "text-visceral-crimson translate-x-2" : "text-white/40 hover:text-albedo"
+                                            activeCategory === cat ? "text-visceral-crimson translate-x-2" : "text-albedo/40 hover:text-albedo"
                                         }`}
                                     >
                                         {cat}
@@ -233,9 +233,9 @@ export default function LexiconNode() {
                             <div className="p-6 bg-white/[0.02] border border-white/5 backdrop-blur-md">
                                 <div className="flex items-center gap-2 mb-4">
                                     <Activity className="w-3 h-3 text-phosphor-green" />
-                                    <span className="font-clinical text-[9px] tracking-widest uppercase text-white/60 text-phosphor-green font-bold">System Status</span>
+                                    <span className="font-clinical text-[9px] tracking-widest uppercase text-albedo/60 text-phosphor-green font-bold">System Status</span>
                                 </div>
-                                <p className="font-clinical text-[10px] text-white/20 uppercase leading-relaxed">
+                                <p className="font-clinical text-[10px] text-albedo/20 uppercase leading-relaxed">
                                     Indexing Complete. <br />
                                     Entries: {lexiconData.length} <br />
                                     Source: Unified Codex Matrix
@@ -265,12 +265,12 @@ export default function LexiconNode() {
                                     </div>
                                     <div className="md:text-right">
                                         <div className="p-2 border border-white/10 rounded-full opacity-20 group-hover:opacity-100 group-hover:border-visceral-crimson/40 transition-all">
-                                            <Target className="w-4 h-4 text-white group-hover:text-visceral-crimson" />
+                                            <Target className="w-4 h-4 text-albedo group-hover:text-visceral-crimson" />
                                         </div>
                                     </div>
                                 </div>
 
-                                <p className="font-sans text-sm md:text-base text-white/40 leading-relaxed max-w-2xl group-hover:text-white/60 transition-colors">
+                                <p className="font-sans text-sm md:text-base text-albedo/40 leading-relaxed max-w-2xl group-hover:text-albedo/60 transition-colors">
                                     {entry.definition}
                                 </p>
                             </motion.div>
@@ -281,7 +281,7 @@ export default function LexiconNode() {
                             <h2 className="font-kinetic text-2xl uppercase tracking-tighter text-albedo">
                                 Ready to Move?
                             </h2>
-                            <p className="font-sans text-sm text-white/40 max-w-sm text-center">
+                            <p className="font-sans text-sm text-albedo/40 max-w-sm text-center">
                                 All the theory in the world means nothing until you step onto the mat. Come see what it feels like.
                             </p>
                             <Link
@@ -298,8 +298,8 @@ export default function LexiconNode() {
                                 href="/"
                                 className="group flex items-center gap-4 px-10 py-5 border border-white/10 hover:border-visceral-crimson transition-all"
                             >
-                                <Compass className="w-4 h-4 text-white/20 group-hover:text-visceral-crimson" />
-                                <span className="font-clinical text-xs tracking-[0.3em] uppercase text-white/60 group-hover:text-albedo transition-colors">
+                                <Compass className="w-4 h-4 text-albedo/20 group-hover:text-visceral-crimson" />
+                                <span className="font-clinical text-xs tracking-[0.3em] uppercase text-albedo/60 group-hover:text-albedo transition-colors">
                                     Return to The Core
                                 </span>
                             </Link>

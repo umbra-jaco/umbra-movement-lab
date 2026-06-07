@@ -62,7 +62,7 @@ export default function LandingPage() {
                             className="font-kinetic text-5xl md:text-7xl lg:text-8xl font-bold uppercase leading-[0.9] tracking-tighter mb-8"
                         >
                             Trust Your <br />
-                            <span className="text-white/40 italic">Body to Know What To Do.</span>
+                            <span className="text-albedo/40 italic">Body to Know What To Do.</span>
                         </motion.h1>
 
                         {/* Editorial Warmth / Prose */}

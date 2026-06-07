@@ -7,25 +7,25 @@ export const metadata = {
 
 export default function AboutPage() {
     return (
-        <div className="min-h-screen bg-void pt-32 pb-24 px-6 md:px-12">
+        <div className="flex-1 bg-void pt-24 pb-16 px-6 md:px-12">
             <div className="max-w-3xl mx-auto">
 
                 <header className="mb-16">
                     <div className="flex items-center gap-3 mb-6">
                         <div className="w-6 h-[1px] bg-visceral-crimson"></div>
-                        <span className="font-clinical text-[10px] tracking-[0.4em] uppercase text-white/40">
+                        <span className="font-clinical text-[10px] tracking-[0.4em] uppercase text-albedo/40">
                             Why We Exist
                         </span>
                     </div>
                     <h1 className="font-kinetic text-5xl md:text-7xl uppercase tracking-tighter text-albedo mb-6">
                         This Is Not a Gym.
                     </h1>
-                    <p className="font-sans text-xl text-white/50 max-w-xl leading-relaxed">
+                    <p className="font-sans text-xl text-albedo/50 max-w-xl leading-relaxed">
                         Most movement spaces are built for people who are already tough. We are building one for everyone else.
                     </p>
                 </header>
 
-                <article className="space-y-16 font-sans text-white/60 leading-relaxed text-base md:text-lg">
+                <article className="space-y-16 font-sans text-albedo/60 leading-relaxed text-base md:text-lg">
 
                     <section className="space-y-4">
                         <h2 className="font-kinetic text-2xl uppercase tracking-tighter text-albedo">The Problem</h2>
@@ -89,7 +89,7 @@ export default function AboutPage() {
                     <h2 className="font-kinetic text-2xl uppercase tracking-tighter text-albedo">
                         Come See What It Feels Like
                     </h2>
-                    <p className="font-sans text-sm text-white/40 max-w-md">
+                    <p className="font-sans text-sm text-albedo/40 max-w-md">
                         The theory makes sense on paper. The actual experience is something else entirely.
                     </p>
                     <Link href="/book" className="px-8 py-4 bg-albedo text-void font-clinical text-sm uppercase tracking-[0.2em] font-bold hover:bg-visceral-crimson hover:text-albedo transition-colors duration-300">

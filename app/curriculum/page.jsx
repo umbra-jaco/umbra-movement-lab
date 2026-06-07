@@ -37,7 +37,7 @@ const curriculumData = [
 
 export default function CurriculumPage() {
     return (
-        <div className="min-h-screen bg-void pt-32 pb-24 px-6 md:px-12 relative overflow-hidden">
+        <div className="flex-1 bg-void pt-24 pb-16 px-6 md:px-12 relative overflow-hidden">
 
             {/* 1. FIXED WATERMARK: Pushed further back and down to avoid title collision */}
             <div className="absolute top-[20%] -right-20 font-kinetic text-[180px] text-white/[0.015] select-none pointer-events-none uppercase font-black rotate-90 lg:rotate-0">
@@ -52,13 +52,13 @@ export default function CurriculumPage() {
                         className="flex items-center gap-3 mb-6"
                     >
                         <div className="w-6 h-[1px] bg-visceral-crimson" />
-                        <span className="font-clinical text-[10px] tracking-[0.4em] uppercase text-white/40">Pedagogical Framework</span>
+                        <span className="font-clinical text-[10px] tracking-[0.4em] uppercase text-albedo/40">Pedagogical Framework</span>
                     </motion.div>
 
                     <h1 className="font-kinetic text-5xl md:text-8xl uppercase tracking-tighter text-albedo mb-8">
                         The <span className="text-visceral-crimson">Curriculum</span>
                     </h1>
-                    <p className="font-editorial text-xl text-white/50 leading-relaxed max-w-3xl">
+                    <p className="font-editorial text-xl text-albedo/50 leading-relaxed max-w-3xl">
                         Four phases, four Saturdays. Each session builds on the last. By the end, you will not just know how to move. You will trust your body to figure it out under pressure.
                     </p>
                 </header>
@@ -86,12 +86,12 @@ export default function CurriculumPage() {
                                 </div>
                             </div>
 
-                            <p className="font-sans text-white/40 text-sm leading-relaxed mb-12 group-hover:text-white/60 transition-colors">
+                            <p className="font-sans text-albedo/40 text-sm leading-relaxed mb-12 group-hover:text-albedo/60 transition-colors">
                                 {item.description}
                             </p>
 
                             <div className="pt-6 border-t border-white/5 flex items-center justify-between">
-                                <span className="font-clinical text-[9px] tracking-[0.3em] uppercase text-white/20">
+                                <span className="font-clinical text-[9px] tracking-[0.3em] uppercase text-albedo/20">
                                     System Objective
                                 </span>
                                 <span className="font-clinical text-[11px] text-albedo/40 uppercase tracking-wider">
@@ -111,10 +111,10 @@ export default function CurriculumPage() {
                             <h2 className="font-kinetic text-2xl uppercase tracking-tighter text-albedo mb-4">
                                 Principle of Least Action
                             </h2>
-                            <p className="font-editorial text-sm text-white/30 italic max-w-xl mb-4">
+                            <p className="font-editorial text-sm text-albedo/30 italic max-w-xl mb-4">
                                 A fancy way of saying your body always finds the easiest path. We just help it see the options.
                             </p>
-                            <p className="font-clinical text-[11px] text-white/30 leading-relaxed uppercase tracking-[0.15em]">
+                            <p className="font-clinical text-[11px] text-albedo/30 leading-relaxed uppercase tracking-[0.15em]">
                                 Optimization is found in the path of least resistance.
                                 By minimizing the action integral, the system achieves
                                 equilibrium through ecological necessity.
@@ -133,7 +133,7 @@ export default function CurriculumPage() {
                     <h2 className="font-kinetic text-3xl uppercase tracking-tighter text-albedo mb-4">
                         Ready to Try It?
                     </h2>
-                    <p className="font-sans text-white/40 text-sm max-w-md mb-8">
+                    <p className="font-sans text-albedo/40 text-sm max-w-md mb-8">
                         Four Saturdays. No experience needed. Just show up and move.
                     </p>
                     <Link href="/book" className="px-8 py-4 bg-albedo text-void font-clinical text-sm uppercase tracking-[0.2em] font-bold hover:bg-visceral-crimson hover:text-albedo transition-colors duration-300">

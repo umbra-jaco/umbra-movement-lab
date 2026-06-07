@@ -38,7 +38,7 @@ const curriculumData = [
     {
         week: "Week 03",
         title: "Positional Dominance",
-        icon: <Layers className="w-6 h-6 text-white/50" />,
+        icon: <Layers className="w-6 h-6 text-albedo/50" />,
         description: "Entering the haptic void of ground control. Focus shifts to pin maintenance and structural framing. You will learn to escape inferior positions under progressive, live resistance using only skeletal frames and breath control.",
         objective: "Live restricted rounds: Pin escapes and structural framing."
     },
@@ -57,7 +57,7 @@ export default function Curriculum() {
             <div className="max-w-3xl mb-16">
                 <h2 className="font-kinetic text-3xl md:text-5xl uppercase tracking-tighter text-albedo mb-4">
                     Accelerated <br/>
-                    <span className="text-white/40">Haptic Integration.</span>
+                    <span className="text-albedo/40">Haptic Integration.</span>
                 </h2>
                 <p className="font-editorial text-lg text-albedo-cream/70">
                     The 4-Week Prototype Program. No rote memorization. No dead-drilling.
@@ -83,13 +83,13 @@ export default function Curriculum() {
                                 {node.icon}
                             </div>
                             <div className="pt-2">
-                <span className="font-clinical text-xs tracking-[0.2em] text-white/40 uppercase mb-2 block">
+                <span className="font-clinical text-xs tracking-[0.2em] text-albedo/40 uppercase mb-2 block">
                   {node.week}
                 </span>
                                 <h3 className="font-kinetic text-2xl uppercase mb-3 text-albedo group-hover:text-visceral-crimson transition-colors">
                                     {node.title}
                                 </h3>
-                                <p className="font-sans text-white/60 text-sm leading-relaxed mb-4">
+                                <p className="font-sans text-albedo/60 text-sm leading-relaxed mb-4">
                                     {node.description}
                                 </p>
                                 <div className="inline-block liquid-glass px-4 py-2 border-l-2 border-l-phosphor-green">
@@ -113,22 +113,22 @@ export default function Curriculum() {
                     <div className="sticky top-32 liquid-glass p-8 border border-white/10 flex flex-col">
                         <div className="mb-8">
                             <h3 className="font-kinetic text-3xl uppercase mb-2">Intake 01 <br/><span className="text-visceral-crimson">Registration</span></h3>
-                            <p className="font-sans text-sm text-white/50">
+                            <p className="font-sans text-sm text-albedo/50">
                                 The laboratory is strictly capped at 12 participants per cohort to ensure clinical oversight and physical safety.
                             </p>
                         </div>
 
                         <div className="space-y-6 mb-8">
                             <div className="flex justify-between border-b border-white/10 pb-4">
-                                <span className="font-clinical text-xs tracking-widest text-white/60 uppercase">Status</span>
+                                <span className="font-clinical text-xs tracking-widest text-albedo/60 uppercase">Status</span>
                                 <span className="font-clinical text-xs tracking-widest text-phosphor-green uppercase animate-pulse">Accepting Candidates</span>
                             </div>
                             <div className="flex justify-between border-b border-white/10 pb-4">
-                                <span className="font-clinical text-xs tracking-widest text-white/60 uppercase">Duration</span>
+                                <span className="font-clinical text-xs tracking-widest text-albedo/60 uppercase">Duration</span>
                                 <span className="font-clinical text-xs tracking-widest text-albedo uppercase">4 Weeks (8 Sessions)</span>
                             </div>
                             <div className="flex justify-between border-b border-white/10 pb-4">
-                                <span className="font-clinical text-xs tracking-widest text-white/60 uppercase">Requirement</span>
+                                <span className="font-clinical text-xs tracking-widest text-albedo/60 uppercase">Requirement</span>
                                 <span className="font-clinical text-xs tracking-widest text-albedo uppercase">Zero Prior Experience</span>
                             </div>
                         </div>

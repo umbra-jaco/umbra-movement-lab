@@ -52,19 +52,19 @@ export default function FaqPage() {
     };
 
     return (
-        <div className="min-h-screen bg-void pt-32 pb-24 px-6 md:px-12">
+        <div className="flex-1 bg-void pt-24 pb-16 px-6 md:px-12">
             <div className="max-w-3xl mx-auto">
                 <header className="mb-16">
                     <div className="flex items-center gap-3 mb-6">
                         <div className="w-6 h-[1px] bg-visceral-crimson"></div>
-                        <span className="font-clinical text-[10px] tracking-[0.4em] uppercase text-white/40">
+                        <span className="font-clinical text-[10px] tracking-[0.4em] uppercase text-albedo/40">
                             Questions
                         </span>
                     </div>
                     <h1 className="font-kinetic text-5xl md:text-7xl uppercase tracking-tighter text-albedo mb-8">
                         FAQ
                     </h1>
-                    <p className="font-sans text-lg text-white/50 max-w-xl">
+                    <p className="font-sans text-lg text-albedo/50 max-w-xl">
                         Real answers for real people. If something is still not clear, reach out directly.
                     </p>
                 </header>
@@ -79,11 +79,11 @@ export default function FaqPage() {
                                 onClick={() => toggle(index)}
                                 className="w-full flex items-center justify-between p-6 text-left hover:bg-white/[0.02] transition-colors"
                             >
-                                <span className="font-sans text-base md:text-lg text-white/80 pr-8">
+                                <span className="font-sans text-base md:text-lg text-albedo/80 pr-8">
                                     {item.question}
                                 </span>
                                 <ChevronDown
-                                    className={`w-5 h-5 text-white/40 flex-shrink-0 transition-transform duration-300 ${
+                                    className={`w-5 h-5 text-albedo/40 flex-shrink-0 transition-transform duration-300 ${
                                         openIndex === index ? "rotate-180" : ""
                                     }`}
                                 />
@@ -97,7 +97,7 @@ export default function FaqPage() {
                                         transition={{ duration: 0.3 }}
                                         className="overflow-hidden"
                                     >
-                                        <p className="px-6 pb-6 font-sans text-sm text-white/40 leading-relaxed">
+                                        <p className="px-6 pb-6 font-sans text-sm text-albedo/40 leading-relaxed">
                                             {item.answer}
                                         </p>
                                     </motion.div>
@@ -112,7 +112,7 @@ export default function FaqPage() {
                     <h2 className="font-kinetic text-2xl uppercase tracking-tighter text-albedo">
                         Still Have Questions?
                     </h2>
-                    <p className="font-sans text-sm text-white/40 max-w-md">
+                    <p className="font-sans text-sm text-albedo/40 max-w-md">
                         Send us a message or come by and see for yourself. The first step is the hardest one.
                     </p>
                     <div className="flex gap-4">

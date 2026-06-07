@@ -100,7 +100,7 @@ export default function VoidedSphere() {
             </motion.div>
 
             {/* System Readouts */}
-            <div className="absolute bottom-0 left-0 p-4 font-clinical text-[9px] tracking-[0.3em] uppercase text-white/20">
+            <div className="absolute bottom-0 left-0 p-4 font-clinical text-[9px] tracking-[0.3em] uppercase text-albedo/20">
                 Status: Non-Equilibrium <br />
                 Stability: {mounted ? "Active" : "Null"}
             </div>

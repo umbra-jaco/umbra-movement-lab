@@ -26,11 +26,11 @@ export default function DiagnosticOverlay() {
             <div className="bg-white/5 px-4 py-2 border-b border-white/10 flex justify-between items-center">
                 <div className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-phosphor-green animate-pulse" />
-                    <span className="font-clinical text-[9px] tracking-[0.3em] uppercase text-white/60">
+                    <span className="font-clinical text-[9px] tracking-[0.3em] uppercase text-albedo/60">
             System_Manifest.v2
           </span>
                 </div>
-                <span className="font-clinical text-[8px] text-white/30 uppercase">
+                <span className="font-clinical text-[8px] text-albedo/30 uppercase">
           Edge: SFO-01
         </span>
             </div>
@@ -39,7 +39,7 @@ export default function DiagnosticOverlay() {
                 {/* 2. System Integrity Metrics */}
                 <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-1">
-            <span className="font-clinical text-[8px] text-white/20 uppercase tracking-widest block">
+            <span className="font-clinical text-[8px] text-albedo/20 uppercase tracking-widest block">
               Integrity
             </span>
                         <span className="font-clinical text-xs text-albedo uppercase tracking-tighter">
@@ -47,7 +47,7 @@ export default function DiagnosticOverlay() {
             </span>
                     </div>
                     <div className="space-y-1 text-right">
-            <span className="font-clinical text-[8px] text-white/20 uppercase tracking-widest block">
+            <span className="font-clinical text-[8px] text-albedo/20 uppercase tracking-widest block">
               Latency
             </span>
                         <span className="font-clinical text-xs text-phosphor-green uppercase tracking-tighter">
@@ -61,11 +61,11 @@ export default function DiagnosticOverlay() {
                     <div className="flex justify-between items-end">
                         <div className="flex items-center gap-2">
                             <Radar className="w-3 h-3 text-visceral-crimson animate-pulse" />
-                            <span className="font-clinical text-[9px] tracking-[0.2em] uppercase text-white/50">
+                            <span className="font-clinical text-[9px] tracking-[0.2em] uppercase text-albedo/50">
                 Haptic SAR Stream
               </span>
                         </div>
-                        <span className="font-clinical text-[8px] text-white/20 uppercase">
+                        <span className="font-clinical text-[8px] text-albedo/20 uppercase">
               Tracking...
             </span>
                     </div>
@@ -86,7 +86,7 @@ export default function DiagnosticOverlay() {
                 {/* 4. Biological Constraints Readout */}
                 <div className="space-y-3 pt-4 border-t border-white/5">
                     <div className="flex justify-between">
-            <span className="font-clinical text-[8px] uppercase text-white/30 tracking-widest">
+            <span className="font-clinical text-[8px] uppercase text-albedo/30 tracking-widest">
               Acoustic Friction
             </span>
                         <span className="font-clinical text-[9px] uppercase text-albedo">
@@ -94,7 +94,7 @@ export default function DiagnosticOverlay() {
             </span>
                     </div>
                     <div className="flex justify-between">
-            <span className="font-clinical text-[8px] uppercase text-white/30 tracking-widest">
+            <span className="font-clinical text-[8px] uppercase text-albedo/30 tracking-widest">
               Spatial Occlusion
             </span>
                         <span className="font-clinical text-[9px] uppercase text-visceral-crimson">
@@ -102,7 +102,7 @@ export default function DiagnosticOverlay() {
             </span>
                     </div>
                     <div className="flex justify-between">
-            <span className="font-clinical text-[8px] uppercase text-white/30 tracking-widest">
+            <span className="font-clinical text-[8px] uppercase text-albedo/30 tracking-widest">
               Lagrangian State
             </span>
                         <span className="font-clinical text-[9px] uppercase text-albedo">
@@ -113,9 +113,9 @@ export default function DiagnosticOverlay() {
 
                 {/* 5. Cloudflare R2 Media Status */}
                 <div className="flex items-center gap-3 pt-4">
-                    <Globe className="w-3 h-3 text-white/20" />
+                    <Globe className="w-3 h-3 text-albedo/20" />
                     <div className="h-[1px] flex-1 bg-white/5" />
-                    <span className="font-clinical text-[8px] tracking-[0.4em] uppercase text-white/20">
+                    <span className="font-clinical text-[8px] tracking-[0.4em] uppercase text-albedo/20">
             Roseville Sanctuary Sync
           </span>
                 </div>
